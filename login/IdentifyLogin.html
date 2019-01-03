@@ -12,7 +12,7 @@
 	</head>
 
 	<body>
-		<div class="layui-container contentBox">
+		<div class="layui-fluid">
 			<div class="layui-row">
 				<div class="layui-col-xs12">
 					<a class="user" href="AccontLogin.html">账号密码登录</a>
@@ -20,7 +20,7 @@
 			</div>
 			<div class="layui-row">
 				<div class="layui-col-xs12 logoimg">
-					<div class="logo"><img src="../images/circular.png" /></div>
+					<div class="logo"><img class="logojpg" src="../img/logo.jpg" /></div>
 					<p class="cityname"><strong>广西农信智慧城市</strong></p>
 				</div>
 			</div>
@@ -33,12 +33,12 @@
 				</div>
 				<div class="layui-form-item">
 					<input id="verification-code" type="text" name=""  placeholder="请输入验证码" class="layui-input" required >
-					<span style="color:#FF0000;font-size:10px;text-align:center;display:none;" >验证码格式不正确（4位数字字母）!</span>
+					<span class="display" >验证码格式不正确（4位数字字母）!</span>
 				</div>
 				<button type="button" class="layui-btn login_btn">登录</button>
 			</form>
 			<div class="layui-row footer">
-				<button type="button" class="reg">用户注册</button>
+				<button type="button" class="register_btn">用户注册</button>
 				<button type="button" class="forget">忘记密码</button>
 			</div>
 		</div>

@@ -13,7 +13,7 @@
 	</head>
 
 	<body>
-		<div class="layui-container contentBox">
+		<div class="layui-fluid">
 			<div class="layui-row">
 				<div class="layui-col-xs12">
 					<a class="user" href="IdentifyLogin.html">验证码登录</a>
@@ -21,38 +21,38 @@
 			</div>
 			<div class="layui-row">
 				<div class="layui-col-xs12 logoimg">
-					<div class="logo"><img src="../images/circular.png" /></div>
+					<div class="logo"><img class="logojpg" src="../img/logo.jpg" /></div>
 					<p class="cityname"><strong>广西农信智慧城市</strong></p>
 				</div>
 			</div>
 			<form class="layui-form User" action="">
 				<div class="layui-form-item onerow">
-					<input id="uid" type="text" name="number" lay-verify="pass" placeholder="请输入账号" autocomplete="off" class="layui-input">
+					<input id="userid" type="text" name="number" placeholder="请输入账号" class="layui-input">
 				</div>
 				<div class="layui-form-item onerow">
-					<input id="pwd" type="password" name="password" lay-verify="pass" placeholder="请输入密码" autocomplete="off" class="layui-input">
+					<input id="pwdid" type="password" name="password"  placeholder="请输入密码" class="layui-input">
 				</div>
-				<button type="button" class="layui-btn login_btn" id="btn">登录</button>
+				<button type="button" class="layui-btn login_btn" id="login_btn">登录</button>
 			</form>
 			<div class="layui-row footer">
-				<button type="button" class="reg">用户注册</button>
+				<button type="button" class="register_btn">用户注册</button>
 				<button type="button" class="forget">忘记密码</button>
 			</div>
 		</div>
 		<script type="text/javascript">
 			$(document).ready(function(e) {
-				$("#btn").click(function() { 
+				$("#login_btn").click(function() { 
 					//取用户名和密码
-					var u = $("#uid").val(); //取输入的用户名
-					var p = $("#pwd").val(); //取输入的密码
+					var username = $("#userid").val(); //取输入的用户名
+					var pwd = $("#pwdid").val(); //取输入的密码
 					$.ajax({
 						url: "",//验证地址
 						data: {
-							u: u,
-							p: p
+							"username": username,
+							"password": pwd,
 						},
 						type: "POST",
-						dataType: "TEXT",
+						dataType: "json",
 						success: function(data) {
 							if(data.trim() == "OK") //要加上去空格，防止内容里面有空格引起错误。
 							{
