@@ -1,7 +1,7 @@
 .back{
 	position: absolute;
-  left: .3rem;
-  top: 0px;
+  left: 1rem;
+  top: .5rem;
   line-height: 2rem;
   font-size: 1rem;
   text-align: center;
@@ -11,8 +11,8 @@
 
 .registerTitle{
 	font-size: 1.25rem;
-  height: 2rem;
-  line-height: 2rem;
+  height: 3rem;
+  line-height: 3rem;
   text-align: center;
 }
 
