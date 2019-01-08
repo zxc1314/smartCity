@@ -1,0 +1,91 @@
+.payContent {
+	margin: 0 -15px;
+	padding: 0rem 1rem;
+	background-color: rgba(63, 183, 246, 1)
+}
+
+.back{
+	position: absolute;
+  left: 1rem;
+  top: .5rem;
+  line-height: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(153, 153, 153, 0);
+}
+
+.rechargeTitle {
+	font-size: 1.25rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  color: #fff;
+}
+
+.recharge-form {
+	padding: 2rem 1rem 1rem;
+}
+
+.recharge-for select {
+	background-color: rgba(63, 183, 246, 1) !important;
+}
+
+.formImg {
+  float: left;
+  display: block;
+  padding: 2px 0;
+  width: 2.5rem;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: right;
+}
+
+.cardType {
+	margin-left: 3.5rem !important;
+}
+
+/* 充值金额 */
+.payTitle {
+	margin: 2rem 0 1rem;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.amountNum {
+  line-height: 50px;
+  text-align: center;
+  color: #050505;    
+  border-radius: 10px;
+  border: 1px solid #888;
+}
+
+/* 温馨提示 */
+.tips {
+	margin: 8px 0; 
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.tipsContent {
+	margin: 8px 0; 
+	font-size: 12px;
+}
+
+.payMethod {
+	font-size: 17px;
+}
+
+/* 支付方式 */
+.payBox {
+	margin: 2rem 1rem 1rem;
+}
+
+.payBox .img-txt{
+	text-align: center;
+}
+
+.payBox .img-txt img {
+	width: 2.5rem;
+	height: 2.5rem;
+}

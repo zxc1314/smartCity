@@ -1,0 +1,135 @@
+/* 头部内容 */
+.payContent {
+	margin: 0 -15px;
+	padding: 2rem 1rem 1.5rem;
+	background-color: rgba(63, 183, 246, 1)
+}
+
+.payContent .img-txt,
+.footer .img-txt {
+	color: #fff;
+	text-align: center;
+}
+
+.payContent .img-txt img {
+	width: 3.5rem;
+}
+
+/* 应用 */
+.appContent {
+	margin: 1rem 0;
+	background-color: #fff;
+	color: #000;
+}
+
+.appContent .img-txt {
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.appContent .img-txt h3 {
+	line-height: 2rem;
+}
+
+.appContent .img-txt img {
+	width: 3rem;
+}
+
+/* 最新动态 */
+.lastestNews {
+	padding: 0 1rem;
+    margin-bottom: 4rem;
+}
+
+.smartCityNotice {
+    border-bottom: 1px solid #eee;
+}
+
+.lastestNewsTitle {
+	margin: 2rem 0 1rem;
+	font: 600 19px/20px '黑体'
+}
+
+.noticeTitleBox {
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.noticeTitleBox .imgNotice {
+	display: inline-block;
+	width: 2rem;
+	padding: .2rem;
+}
+
+.noticeTitleBox .noticeTitle {
+	margin-left: 1rem;
+}
+
+.noticeTitleBox .noticeTitle p {
+	color: #333;
+}
+
+.noticeTitleBox .noticeTitle small {
+	color: #aaa;
+}
+
+.noticeTxt h2 {
+	font: 600 15px/25px 'Arial Verdana';
+}
+
+.noticeTxt small {
+	color: #aaa;
+}
+
+.grayBox-icon {
+	display: inline-block;
+	margin-right: .3rem;
+	width: 11.6px;
+    height: 11.6px;
+	line-height: 1.2rem; 
+	background-color: #aaa;
+	font-size: 16px;
+}
+
+.time {
+	margin: 1rem 0;
+}
+
+.rechargeMsg {
+	color: #999;
+	word-break: break-all;
+}
+
+/* 底部固定导航 */
+.footer {
+	position: fixed;
+	bottom: 0;
+	max-width: 768px;
+    width: 100%;
+	padding: .3rem 0;
+	background-color: rgba(249, 249, 249, 1)
+}
+
+.footer .img-txt h3 {
+	color: #999;
+	font-size: 12px;
+	text-align: center;
+}
+
+.footer .img-txt img {
+	width: 2rem;
+}
+
+/*
+ *新闻标题和消息通知内容超出两行隐藏
+ *不兼容IE和火狐
+*/
+.newsTitle,
+.rechargeMsg {
+	word-break: break-all;
+   	text-overflow: ellipsis;
+  	display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+   	-webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+   	-webkit-line-clamp: 2; /** 显示的行数 **/
+   	overflow: hidden;  /** 隐藏超出的内容 **/
+}
