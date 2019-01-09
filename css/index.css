@@ -2,11 +2,10 @@
 .payContent {
 	margin: 0 -15px;
 	padding: 2rem 1rem 1.5rem;
-	background-color: rgba(63, 183, 246, 1)
+	background-color: #005FA6;
 }
 
-.payContent .img-txt,
-.footer .img-txt {
+.payContent .img-txt,.footer .img-txt {
 	color: #fff;
 	text-align: center;
 }
@@ -33,6 +32,7 @@
 
 .appContent .img-txt img {
 	width: 3rem;
+	height: 3rem;
 }
 
 /* 最新动态 */
