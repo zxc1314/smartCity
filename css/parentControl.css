@@ -1,6 +1,9 @@
 .layui-form-label{
 	width: auto;
 }
+.control-form{
+	 margin: 3rem .5rem;
+}
 .layui-input{
 	text-align: right;
 	padding-right: 1rem;
