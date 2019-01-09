@@ -22,47 +22,89 @@
 				<div class="layui-form-item">
 					<label class="layui-form-label">姓名</label>
 					<div class="layui-input-block">
-						<input type="text" name="identity" placeholder="付苏苏" autocomplete="off" class="layui-input">
+						<input type="text" name="identity" id="namea"  autocomplete="off" class="layui-input"  disabled="" value="付苏苏" >
 					</div>
 				</div>
 				<div class="layui-form-item">
 					<label class="layui-form-label">学工号</label>
 					<div class="layui-input-block">
-						<input type="text" name="identity" lay-verify="identity" placeholder="201401014102" autocomplete="off" class="layui-input">
+						<input type="text" name="identity" id="numbera" lay-verify="identity" placeholder="201401014102" autocomplete="off" class="layui-input"  disabled="" >
 					</div>
 				</div>
 				<div class="layui-form-item last">
 					<label class="layui-form-label">学校</label>
 					<div class="layui-input-block">
-						<input type="text" name="identity" lay-verify="identity" placeholder="郑州大学" autocomplete="off" class="layui-input">
+						<input type="text" name="identity" id="schoola" lay-verify="identity" placeholder="郑州大学" autocomplete="off" class="layui-input"  disabled=""  >
 					</div>
 				</div><hr /><hr /><hr /><hr /><hr /><hr /><hr />
 				<div class="layui-form-item">
 					<label class="layui-form-label">姓名</label>
 					<div class="layui-input-block">
-						<input type="text" name="identity" lay-verify="identity" placeholder="付苏苏" autocomplete="off" class="layui-input">
+						<input type="text" name="identity" id="nameb" lay-verify="identity" placeholder="付苏苏" autocomplete="off" class="layui-input"  disabled="" >
 					</div>
 				</div>
 				<div class="layui-form-item">
 					<label class="layui-form-label">学工号</label>
 					<div class="layui-input-block">
-						<input type="text" name="identity" lay-verify="identity" placeholder="201401014102" autocomplete="off" class="layui-input">
+						<input type="text" name="identity" id="numberb" lay-verify="identity" placeholder="201401014102" autocomplete="off" class="layui-input"  disabled=""  >
 					</div>
 				</div>
 				<div class="layui-form-item ">
 					<label class="layui-form-label">学校</label>
 					<div class="layui-input-block">
-						<input type="text" name="identity" lay-verify="identity" placeholder="郑州大学" autocomplete="off" class="layui-input">
+						<input type="text" name="identity"  id="schoolb" lay-verify="identity" placeholder="郑州大学" autocomplete="off" class="layui-input" disabled="" >
 					</div>
 				</div>
 			</form>
 		</div>
 		<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
-	    <script type="text/javascript" src="../../layui/layui.js"></script>
-	    <script>
-	    	$("form :input").onmouseout{
-	    		
-	    	}
+	    <script type="text/javascript" src="../../layui/layui.js"></script> 
+	    <script type="text/javascript">
+	    	$(document).ready(function() {
+            $.ajax({
+                url : "",
+                dataType : "json",
+                type : "post",
+                async : false,
+                success : function(data) { 
+                var html = "";
+                for(var i=0;i<data.length;i++){   
+                        var ls = data[i];     
+                        html +="<div class='layui-form-item'>"
+                             +"<label class='layui-form-label'>姓名</label>"
+                             +"<div class='layui-input-block'>"
+                             +"<input type='text' name='identity' id='namea' autocomplete='off' class='layui-input' disabled='' value='"+ls.namea+"' >"
+                             +"</div></div>"
+                             +"<div class='layui-form-item'>"
+					         +"<label class='layui-form-label'>学工号</label>"
+					         +"<div class='layui-input-block'>"
+						     +"<input type='text' name='identity' id='numbera' lay-verify='identity' autocomplete='off' class='layui-input'  disabled='' value='"+ls.numbera+"' >"
+					         +"</div></div>"
+					         +"<div class='layui-form-item'>"
+					         +"<label class='layui-form-label'>学校</label>"
+					         +"<div class='layui-input-block'>"
+						     +"<input type='text' name='identity' id='schoola' lay-verify='identity' autocomplete='off' class='layui-input'  disabled='' value='"+ls.schoola+"' >"
+					         +"</div></div>"
+					         +"<div class='layui-form-item'>"
+                             +"<label class='layui-form-label'>姓名</label>"
+                             +"<div class='layui-input-block'>"
+                             +"<input type='text' name='identity' id='nameb' autocomplete='off' class='layui-input' disabled='' value='"+ls.nameb+"' >"
+                             +"</div></div>"
+                             +"<div class='layui-form-item'>"
+					         +"<label class='layui-form-label'>学工号</label>"
+					         +"<div class='layui-input-block'>"
+						     +"<input type='text' name='identity' id='numberb' lay-verify='identity' autocomplete='off' class='layui-input'  disabled='' value='"+ls.numberb+"' >"
+					         +"</div></div>"
+					         +"<div class='layui-form-item'>"
+					         +"<label class='layui-form-label'>学校</label>"
+					         +"<div class='layui-input-block'>"
+						     +"<input type='text' name='identity' id='schoolb' lay-verify='identity' autocomplete='off' class='layui-input'  disabled='' value='"+ls.schoolb+"' >"
+					         +"</div></div>";
+                    }
+                    $(".control-form").html(html); 
+                },
+            })
+        })
 	    </script>
 	</body>
 
