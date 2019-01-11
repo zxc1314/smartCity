@@ -28,11 +28,17 @@
 
 .appContent .img-txt h3 {
 	line-height: 2rem;
+    font-size: .88rem;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-break: break-all;
 }
 
 .appContent .img-txt img {
-	width: 3rem;
-	height: 3rem;
+	width: 2.82rem;
+	height: 2.82rem;
 }
 
 /* 最新动态 */

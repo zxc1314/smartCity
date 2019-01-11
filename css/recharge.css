@@ -1,20 +1,34 @@
 .payContent {
 	margin: 0 -15px;
 	padding: 0rem 1rem;
-	background-color: rgba(63, 183, 246, 1)
+	background-color: #005FA6;
 }
-
+.ofenPayContent {
+  color: #000;
+  background-color: #fff;
+}
 .back{
 	position: absolute;
   left: 1rem;
-  top: .5rem;
-  line-height: 2rem;
   font-size: 1rem;
   text-align: center;
   color: #fff;
   background-color: rgba(153, 153, 153, 0);
 }
-
+.ofenBack {
+  color: #489CF5;
+}
+.oftenRecharge {
+  position: absolute;
+  right: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(153, 153, 153, 0);
+}
+.oftenRecharge:hover {
+    color: #fff;
+}
 .rechargeTitle {
 	font-size: 1.25rem;
   height: 3rem;
@@ -22,7 +36,9 @@
   text-align: center;
   color: #fff;
 }
-
+.ofenPayContent .rechargeTitle {
+  color: #000;
+}
 .recharge-form {
 	padding: 2rem 1rem 1rem;
 }
@@ -32,19 +48,69 @@
 }
 
 .formImg {
-  float: left;
-  display: block;
-  padding: 2px 0;
-  width: 2.5rem;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: right;
+    float: right;
+    display: block;
+    padding: 2px 0;
+    width: 4.5rem;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background: none;
+    border: none;
 }
-
+.formImg i {
+    font-size: 1.8rem;
+    line-height: 38px;
+}
+.formInput input {
+    background: none;
+    color: #fff;
+    border-radius: 7px;
+}
+.formInput .layui-input::-webkit-input-placeholder{
+    color:#fff;
+}
+.formInput .layui-input:-moz-placeholder{
+    color:#fff;
+}
+.formInput .layui-input::-moz-placeholder{
+    color:#fff;
+}
+.formInput .layui-input:-ms-input-placeholder{
+    color:#fff;
+}
 .cardType {
-	margin-left: 3.5rem !important;
+	
 }
-
+.cardNum {
+    margin: 0 5rem 10px 3px!important;
+}
+/*姓名卡状态*/
+.nameCard {
+    margin-top: 20px;
+    border: 1px solid #F5F5F5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px #F5F5F5;
+    color: #757779;
+}
+.nameCard .layui-form-label {
+    float: left;
+    display: block;
+    padding: 9px 15px;
+    width: 57px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: right;
+}
+.nameCard .layui-input-block {
+    margin-left: 88px;
+    min-height: 36px;
+}
+.nameCard .layui-input-block input {
+  border: none;
+  color: #757779;
+}
 /* 充值金额 */
 .payTitle {
 	margin: 2rem 0 1rem;
@@ -58,8 +124,12 @@
   color: #050505;    
   border-radius: 10px;
   border: 1px solid #888;
+  width: 100%;
 }
-
+.activeTrue {
+  border-color: #005FA6;
+  color: #005FA6;
+}
 /* 温馨提示 */
 .tips {
 	margin: 8px 0; 
@@ -88,4 +158,33 @@
 .payBox .img-txt img {
 	width: 2.5rem;
 	height: 2.5rem;
+}
+
+/*常用充值*/
+
+#oftenNameCard {
+  margin: 0 -15px;
+  padding-bottom: 50px;
+}
+.cardBox {
+  height: 90px;
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 0 0 0 15px;
+}
+.cardBox p {
+  font-size: .9rem;
+  line-height: 23px;
+  height: 23px;
+}
+.cardBox p:first-child {
+  margin-top: 10px;
+}
+.cardDel {
+  display: none;
+  height: 90px;
+  line-height: 90px;
+  background-color: #CC0000;
+  text-align: center;
+  color: #fff;
 }
