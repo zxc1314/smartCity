@@ -13,8 +13,8 @@
 		<div class="layui-row payContent ofenPayContent">
 			
 			<h2 class="rechargeTitle">
-				<a href="javascript:history.back(-1)" class="back ofenBack"><i class="layui-icon layui-icon-left"></i> 返回</a>
-				充值
+				<a href="javascript:;" class="back ofenBack"><i class="layui-icon layui-icon-left"></i> 返回</a>
+				常用充值
 			</h2>
 		</div>
 		<!-- 常用卡信息 -->
@@ -48,6 +48,10 @@
 	        element = layui.element,
 	        laytpl = layui.laytpl;
         
+        $(".ofenBack").on("click",function(){
+        	var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+			parent.layer.close(index); //再执行关闭
+        })
 	 	/*$.ajax({
 	 		url: '',
 	 		type: 'POST',
@@ -122,7 +126,7 @@
 			};
 			//点击确定事件
 			$this.on("click",function(){
-				alert("ok");
+				alert("ok,这里需配置服务器环境才可以正确关闭窗口并执行回调函数");
 				var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
 				parent.layer.close(index); //再执行关闭
 				
