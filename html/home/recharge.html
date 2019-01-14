@@ -24,9 +24,9 @@
 					<div class="cardType">
 					    <select name="cardType" lay-verify="cardType" lay-search>
 							<option value="">请选择行业</option>
-							<!-- <option value="0">城市云卡</option>
+							<option value="0">城市云卡</option>
 							<option value="1">校园卡</option>
-							<option value="2">企业卡</option> -->
+							<option value="2">企业卡</option>
 						</select> 
 					</div> 
 			    </div>
@@ -34,7 +34,7 @@
 				    <!-- <select name="schoolCompany" lay-verify="schoolCompany" lay-search>
 					    <option value="">请选择学校/企业</option>
 					</select> -->  
-					<input type="text" name="schoolCompany" lay-verify="schoolCompany" autocomplete="off" placeholder="请选择学校/企业" class="layui-input" readonly="readonly">
+					<input type="text" name="schoolCompany" lay-verify="schoolCompany" autocomplete="off" placeholder="请选择学校/企业" class="layui-input schoolCompany" readonly="readonly">
 			    </div>
 			    <div class="layui-form-item formInput">
 			    	<button type="button" class="formImg">
@@ -43,6 +43,8 @@
 			  		<div class="cardNum layui-input-inline">
 					    <select name="cardNum" lay-verify="cardNum" lay-search>
 						    <option value="">请输入学工号</option>
+						    <option value="20137740368">20137740368</option>
+						    <option value="20137740369">20137740369</option>
 						</select>  
 					</div>
 			    </div>
@@ -52,16 +54,16 @@
 		<!-- 姓名卡状态 -->
 		<div class="layui-row nameCard">
 			<div class=" layui-col-xs6">
-				    <label class="layui-form-label">姓名 :</label>
-				    <div class="layui-input-block">
-				      <input type="text" name="title" lay-verify="title" autocomplete="off" value="张三" class="layui-input" readonly="readonly">
-				    </div>
+			    <label class="layui-form-label">姓名 :</label>
+			    <div class="layui-input-block">
+			      <input type="text" name="title" lay-verify="title" autocomplete="off" value="张三" class="layui-input" readonly="readonly">
+			    </div>
 			</div>
 			<div class=" layui-col-xs6">
-				    <label class="layui-form-label">卡状态 :</label>
-				    <div class="layui-input-block">
-				      <input type="text" name="title" lay-verify="title" autocomplete="off" value="正常" class="layui-input" readonly="readonly">
-				    </div>
+			    <label class="layui-form-label">卡状态 :</label>
+			    <div class="layui-input-block">
+			      <input type="text" name="status" lay-verify="status" autocomplete="off" value="正常" class="layui-input" readonly="readonly">
+			    </div>
 			</div>
 		</div>
 		<!-- end-姓名卡状态 -->
@@ -138,7 +140,6 @@
 			</div>
 		</div>
 		<!-- end-支付方式 -->
-
 	</div>
 	<script id="moneyInput" type="text/html">
 		<div id="moneyInput" style="margin: 20px;">
@@ -163,6 +164,7 @@
 		  var form = layui.form,
 		      layer = layui.layer,
 		      element = layui.element;
+		    //打开常用充值页面弹窗
 		    $(".oftenRecharge").on("click",function(){
 		     	layer.open({
 		        	type: 2, 
@@ -172,11 +174,44 @@
 		  			area: ['100%','100%'],
 		  			yes: function(index){
 		  				layer.close(index);
+		  			},
+		  			end: function(){
+		  				form.render();
 		  			}
 		        })
-		    })
-		    //打开常用充值页面弹窗
-	    	
+		    });
+			//打开选择学校页面弹窗
+	    	$(".schoolCompany").on("click",function(){
+		     	layer.open({
+		        	type: 2, 
+		        	closeBtn: 0,
+		        	title: false,
+		  			content: 'chooseSchool.html',
+		  			area: ['100%','100%'],
+		  			yes: function(index){
+		  				layer.close(index);
+		  			},
+		  			end: function(){
+		  				form.render();
+		  			}
+		        })
+		    });
+		    //打开查询学工号页面弹窗
+	    	$(".formImg").on("click",function(){
+		     	layer.open({
+		        	type: 2, 
+		        	closeBtn: 0,
+		        	title: false,
+		  			content: 'cardNumQuery.html',
+		  			area: ['100%','100%'],
+		  			yes: function(index){
+		  				layer.close(index);
+		  			},
+		  			end: function(){
+		  				form.render();
+		  			}
+		        })
+		    });
 		  // 下拉框调用接口 暂未完成
 		  function ajaxGetDropDown(url, dataBox, data) {
 		  	$.ajax({

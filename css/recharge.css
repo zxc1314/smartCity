@@ -171,6 +171,7 @@
   margin-top: 10px;
   background-color: #fff;
   padding: 0 0 0 15px;
+  line-height: 90px;
 }
 .cardBox p {
   font-size: .9rem;
@@ -187,4 +188,74 @@
   background-color: #CC0000;
   text-align: center;
   color: #fff;
+}
+
+#cardQuery .schoolQuery {
+  background: none;
+  border: none;
+  color: #fff;
+}
+#cardQuery .layui-form-label {
+  padding: 9px;
+  text-align: left;
+  color: #fff;
+}
+#cardQuery .layui-btn {
+  width: 100%;
+  background-color: #D9E5FA;
+  color: #4889EF;
+}
+.cardBoxQuery {
+    background-color: #97A6F9;
+    box-shadow: 3px 3px 8px #97A6F9;;
+    border-radius: 10px;
+    color: #333;
+}
+
+.seachSchool .layui-form-item {
+  position: relative;
+  margin: 8px auto;
+  line-height: 38px;
+}
+.seachSchool .seachBtn {
+  position: absolute;
+  padding-left: 5px;
+  border: none;
+  background: none;
+  height: 38px;
+  line-height: 38px;
+}
+.seachSchool .seachBtn i {
+  font-size: 1.2rem;
+}
+.seachSchool .schoolQuery {
+  padding-left: 30px;
+  border: none;
+  border-radius: 7px;
+}
+
+#chooseSchool .firstCode {
+  margin: 0 -15px;
+  padding: 0 15px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 1px solid #e8e5e5;
+  border-top: 1px solid #e8e5e5;
+}
+#chooseSchool .schoolList {
+  margin: 0 -15px;
+  padding: 5px 15px 0px;
+  background-color: #fff;
+}
+#chooseSchool .schoolList li {
+  margin-top: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+#chooseSchool .schoolList li img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
 }
