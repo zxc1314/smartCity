@@ -1,0 +1,125 @@
+.transitContent {
+	margin: 0 -15px;
+    padding: 0rem 1rem;
+    color: #000;
+    background-color: #fff;
+}
+.transitTitle {
+	font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #000;
+}
+.back {
+	position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #489CF5;
+    background-color: rgba(153,153,153,0);
+}
+.transitCard {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(92, 209, 222, 1);
+    border-radius: 10px;
+    box-shadow: 0px 20px 30px rgba(58, 165, 216, 0.349019607843137);
+    padding: 10px;
+    color: #fff;
+    text-align: right;
+    font-size: 1.1rem;
+}
+.transitCard p.title {
+	text-align: left;
+}
+.transitCard p.title img {
+	width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 10px;
+}
+.transitCard p.cardNum {
+    font-size: 2.2rem;
+    margin: 30px auto 15px;
+}
+.transitCard p.cardName span {
+	padding: 4px 10px;
+    background: rgba(255,255,255,.5);
+    margin-right: -10px;
+    font-size: 1rem;
+}
+
+.transitContentBox {
+
+}
+.transitContentBox>.layui-col-xs6 {
+	padding: 5px;
+}
+.contentOne{
+    height: 102px;
+    line-height: 102px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.contentOne>div:first-child {
+	text-align: center;
+}
+.contentOne>div:first-child img {
+	width: 3rem;
+	height: 3rem;
+}
+.contentOne>div:last-child {
+	font-size: 1.15rem;
+    font-weight: 700;
+    font-style: normal;
+    color: #666;
+}
+.myTransitCard {
+	background-color: #2A82E4;
+}
+.myTransitCard h2,.myTransitCard a {
+	color: #fff;
+}
+
+.myTransitCardBox {
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+    margin-top: 20px;
+}
+.myTransitCardBox>p {
+	margin: 15px auto;
+}
+
+.myTransitCardBox>p.myTcName {
+	font-weight: 700;
+    font-size: 16px;
+    color: #333;
+}
+.myTransitCardBox>p.myTc img {
+	width: 80%;
+}
+.myTransitCardBox>p.myTcBtn {
+	padding: 5px 0 20px;
+    border-bottom: 1px dashed #999;
+}
+.myTransitCardBox>p.myTcBtn button {
+	width: 150px;
+    height: 37px;
+    border-radius: 100px;
+    background: none;
+    border: 1px solid rgba(153, 153, 153, 1);
+}
+.myTransitCardBox>p.myTcContent {
+	color: #333;
+	font-size: .9rem;
+}
+.myTransitCardBox>p.myTcContent img {
+    width: 30px;
+    height: 24px;
+}
+.myTransitCardBox>p.myTcHelp {
+	color: #666;
+
+}
