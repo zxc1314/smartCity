@@ -4,7 +4,7 @@
 
 .user {
 	float: right;
-	color: rgb(72, 156, 245);
+	color: rgba(72, 156, 245, 1);
 }
 
 .file-title {
@@ -25,11 +25,6 @@
 	text-align: center;
 	margin-top: 6%;
 }
-
-.layui-form-item {
-	border-bottom: 1px solid lightgray;
-}
-
 .layui-input,
 .layui-textarea {
 	border: none;
@@ -37,7 +32,7 @@
 
 .get {
 	background-color: white;
-	color: rgb(72, 156, 245);
+	color: rgb(72, 156, 245,1);
 	border: none;
 	position: absolute;
 	top: 0rem;
@@ -49,7 +44,7 @@
 
 .login_btn {
 	width: 100%;
-	background-color: rgb(72, 156, 245);
+	background-color: rgb(72, 156, 245,1);
 	border-radius: 5px;
 	margin-top: 5%;
 }
@@ -60,7 +55,7 @@
 
 .register_btn {
 	background-color: white;
-	color: rgb(72, 156, 245);
+	color: rgb(72, 156, 245,1);
 	border: none;
 }
 
@@ -117,7 +112,7 @@
 }
 
 .next {
-	color: rgb(72, 156, 245);
+	color: rgb(72, 156, 245,1);
 	position: absolute;
 	right: 1rem;
 	top: 0px;
@@ -179,8 +174,9 @@
 .getCode {
 	position: absolute;
 	right: 1rem;
-	bottom: 8.5rem;
+	bottom: 9rem;
 	color: rgba(72, 156, 245, 1);
+	z-index: 999;
 }
 
 .formInputBox {

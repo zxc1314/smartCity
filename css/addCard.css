@@ -1,0 +1,16 @@
+.back {
+	position: absolute;
+	left: .3rem;
+	top: 0px;
+	line-height: 2rem;
+	font-size: 1rem;
+	text-align: center;
+	color: rgba(72, 156, 245, 1);
+	background-color: rgba(153, 153, 153, 0);
+}
+.file-title{
+	text-align: center;
+}
+.explain{
+	margin: 3rem 0rem 0rem .6rem;
+}

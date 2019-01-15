@@ -14,98 +14,85 @@
 
 	<body>
 		<div class="layui-fluid">
-			<div>
+			<div class="top">
 				<a href="###" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
 				<h2 class="file-title">家长管控</h2>
+				<a href="###" class="range">适用范围</a>
 			</div>
-			<form class="layui-form control-form" action="">
-				<div class="layui-form-item">
-					<label class="layui-form-label">姓名</label>
-					<div class="layui-input-block">
-						<input type="text" name="identity" id="namea"  autocomplete="off" class="layui-input"  disabled="" value="付苏苏" >
-					</div>
-				</div>
-				<div class="layui-form-item">
-					<label class="layui-form-label">学工号</label>
-					<div class="layui-input-block">
-						<input type="text" name="identity" id="numbera" lay-verify="identity" placeholder="201401014102" autocomplete="off" class="layui-input"  disabled="" >
-					</div>
-				</div>
-				<div class="layui-form-item last">
-					<label class="layui-form-label">学校</label>
-					<div class="layui-input-block">
-						<input type="text" name="identity" id="schoola" lay-verify="identity" placeholder="郑州大学" autocomplete="off" class="layui-input"  disabled=""  >
-					</div>
-				</div><hr /><hr /><hr /><hr /><hr /><hr /><hr />
-				<div class="layui-form-item">
-					<label class="layui-form-label">姓名</label>
-					<div class="layui-input-block">
-						<input type="text" name="identity" id="nameb" lay-verify="identity" placeholder="付苏苏" autocomplete="off" class="layui-input"  disabled="" >
-					</div>
-				</div>
-				<div class="layui-form-item">
-					<label class="layui-form-label">学工号</label>
-					<div class="layui-input-block">
-						<input type="text" name="identity" id="numberb" lay-verify="identity" placeholder="201401014102" autocomplete="off" class="layui-input"  disabled=""  >
-					</div>
-				</div>
-				<div class="layui-form-item ">
-					<label class="layui-form-label">学校</label>
-					<div class="layui-input-block">
-						<input type="text" name="identity"  id="schoolb" lay-verify="identity" placeholder="郑州大学" autocomplete="off" class="layui-input" disabled="" >
-					</div>
-				</div>
+			<h3 class="msg">开通后，接收孩子校园、公交等信息</h3>
+			<form class="layui-form control-form" action="" id="content">
 			</form>
+			<h3 class="msg">温馨提示：由于网络延迟，有可能出现信息更新信息延迟情况，请耐心等待。</h3>
 		</div>
 		<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
-	    <script type="text/javascript" src="../../layui/layui.js"></script> 
-	    <script type="text/javascript">
-	    	$(document).ready(function() {
-            $.ajax({
-                url : "",
-                dataType : "json",
-                type : "post",
-                async : false,
-                success : function(data) { 
-                var html = "";
-                for(var i=0;i<data.length;i++){   
-                        var ls = data[i];     
-                        html +="<div class='layui-form-item'>"
-                             +"<label class='layui-form-label'>姓名</label>"
-                             +"<div class='layui-input-block'>"
-                             +"<input type='text' name='identity' id='namea' autocomplete='off' class='layui-input' disabled='' value='"+ls.namea+"' >"
-                             +"</div></div>"
-                             +"<div class='layui-form-item'>"
-					         +"<label class='layui-form-label'>学工号</label>"
-					         +"<div class='layui-input-block'>"
-						     +"<input type='text' name='identity' id='numbera' lay-verify='identity' autocomplete='off' class='layui-input'  disabled='' value='"+ls.numbera+"' >"
-					         +"</div></div>"
-					         +"<div class='layui-form-item'>"
-					         +"<label class='layui-form-label'>学校</label>"
-					         +"<div class='layui-input-block'>"
-						     +"<input type='text' name='identity' id='schoola' lay-verify='identity' autocomplete='off' class='layui-input'  disabled='' value='"+ls.schoola+"' >"
-					         +"</div></div>"
-					         +"<div class='layui-form-item'>"
-                             +"<label class='layui-form-label'>姓名</label>"
-                             +"<div class='layui-input-block'>"
-                             +"<input type='text' name='identity' id='nameb' autocomplete='off' class='layui-input' disabled='' value='"+ls.nameb+"' >"
-                             +"</div></div>"
-                             +"<div class='layui-form-item'>"
-					         +"<label class='layui-form-label'>学工号</label>"
-					         +"<div class='layui-input-block'>"
-						     +"<input type='text' name='identity' id='numberb' lay-verify='identity' autocomplete='off' class='layui-input'  disabled='' value='"+ls.numberb+"' >"
-					         +"</div></div>"
-					         +"<div class='layui-form-item'>"
-					         +"<label class='layui-form-label'>学校</label>"
-					         +"<div class='layui-input-block'>"
-						     +"<input type='text' name='identity' id='schoolb' lay-verify='identity' autocomplete='off' class='layui-input'  disabled='' value='"+ls.schoolb+"' >"
-					         +"</div></div>";
-                    }
-                    $(".control-form").html(html); 
-                },
-            })
-        })
-	    </script>
+		<script type="text/javascript" src="../../layui/layui.js"></script>
+		<script type="text/javascript">
+			layui.use('form', function() {
+						var form = layui.form;
+				})
+		</script>
+		<script id="appContent" type="text/html">
+			{{# layui.each(d.appList, function(index, item){ }}
+			<div class="layui-form-item">
+					<label class="layui-form-label">孩子姓名</label>
+					<div class="layui-input-block">
+						<input type="text" name="identity" id="namea" autocomplete="off" class="layui-input" disabled="" value="{{ item.childName }}">
+					</div><hr />
+					<label class="layui-form-label">开通</label>
+					<input type="checkbox" name="xxx" lay-skin="switch">
+				</div>
+			<!--无数据时-->
+			{{# }); }} {{# if(d.appList.length === 0){ }}
+			<div class="layui-form-item">
+					<label class="layui-form-label">孩子姓名</label>
+					<div class="layui-input-block">
+						<input type="text" name="identity" id="namea" autocomplete="off" class="layui-input" disabled="" value="付苏苏">
+					</div><hr />
+					<label class="layui-form-label">开通</label>
+					<input type="checkbox" name="xxx" lay-skin="switch">
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">孩子姓名</label>
+					<div class="layui-input-block">
+						<input type="text" name="identity" id="namea" autocomplete="off" class="layui-input" disabled="" value="付醒醒">
+					</div><hr />
+					<label class="layui-form-label">开通</label>
+					<input type="checkbox" name="xxx" lay-skin="switch">
+				</div>
+			{{# } }}
+		</script>
+		<script>
+			layui.use('laytpl', function() {
+				var laytpl = layui.laytpl;
+				var appData = { //数据
+					"title": "应用模板引擎",
+					"appList": [{
+							"childName": "付星星"
+						},
+						{
+							"childName": "付醒醒"
+						},
+						{
+							"childName": "付妮妮"
+						}
+					]
+				}
+				// $.ajax({
+				// 	url: '',
+				// 	type: 'post',
+				// 	data: {
+				// 	},
+				// 	dataType: 'json',
+				// 	success: function (data) {
+				// 		console.log(data);3
+				// 	}
+				var getAppTpl = appContent.innerHTML,
+					appView = document.getElementById('content');
+				laytpl(getAppTpl).render(appData, function(html) {
+					appView.innerHTML = html;
+				});
+			});
+		</script>
 	</body>
 
 </html>
