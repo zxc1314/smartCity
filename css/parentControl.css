@@ -1,9 +1,29 @@
+html{
+	background-color: rgb(247,247,247);
+}
+.layui-fluid{
+	padding: 0px 0px;
+}
+.top{
+	background-color: white;
+	height: 3rem;
+}
+.msg{
+	/*text-indent:2rem;*/
+	margin-top: 1rem;
+	text-align: center;
+}
 .layui-form-label{
 	width: auto;
 }
 .control-form{
-	 margin: 3rem .5rem;
+	 margin: 1rem 0rem;
 }
+.layui-form-item{
+	background-color: white;
+	padding: 0 1rem;
+}
+
 .layui-input{
 	text-align: right;
 	padding-right: 1rem;
@@ -16,4 +36,15 @@
 }
 hr{
 	margin: 0 0;
+}
+.range{
+	color: rgb(72, 156, 245,1);
+	position: absolute;
+	right: 1rem;
+	top: 0px;
+	line-height: 2.3rem;
+	font-size: 1rem;
+}
+.layui-form-switch{
+	float: right;
 }

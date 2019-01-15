@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../../layui/css/layui.css" />
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/more.css" />
+		<title>更多</title>
+	</head>
+
+	<body>
+		<div class="layui-fluid">
+			<div>
+				<a href="" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
+				<span href="" class="edit" >编辑</span>
+				<span href="" class="end" >完成</span>
+				
+			</div>
+			<!--上部分内容-->
+			<div class="layui-row appContent" id="topContent">
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/reduce.png" class="reduce"  />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<!--<img src="../../img/reduce.png" />-->
+							<h3>公交</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/reduce.png" class="reduce" />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>学校</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/reduce.png" class="reduce" />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>企业</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/reduce.png" class="reduce" />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>社区</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/reduce.png" class="reduce" />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>医疗</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/reduce.png" class="reduce" />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>快捷</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/reduce.png" class="reduce"  />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>医院</h3>
+						</div>
+					</a>
+				</div>
+			</div>
+			<hr style="position: relative;top: 4rem;" />
+			<!--下部分内容（更多应用）-->
+			<div class="layui-row appContent footContent" id="footContent">
+				<h3><strong>更多应用</strong></h3>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/add.png" class="addAplay"  />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>公交</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/add.png" class="addAplay"  />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>学校</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/add.png" class="addAplay"  />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>企业</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/add.png" class="addAplay" />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>社区</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/add.png" class="addAplay" />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>医疗</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<a href="javascript:;">
+						<img src="../../img/add.png" class="addAplay" />
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>快捷</h3>
+						</div>
+					</a>
+				</div>
+				<div class="layui-col-xs3">
+					<img src="../../img/add.png" class="addAplay"  />
+					<a href="javascript:;">
+						<div class="img-txt">
+							<img src="../../img/tu.png" alt="">
+							<h3>医院</h3>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="../../layui/layui.js"></script>
+		<script type="text/javascript">
+			$(".edit").on('click', function() {
+				 $(".edit").css("display","none");
+				 $(".end").css("display","block");
+				 $(".reduce").css("display","block");
+				 $(".addAplay").css("display","block")
+				 
+			});
+		</script>
+	</body>
+
+</html>

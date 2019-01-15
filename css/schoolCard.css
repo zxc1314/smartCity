@@ -1,0 +1,100 @@
+
+.file-title {
+	text-align: center;
+}
+
+.back {
+	position: absolute;
+	left: .3rem;
+	top: 0px;
+	line-height: 2rem;
+	font-size: 1rem;
+	text-align: center;
+	color: rgba(72, 156, 245, 1);
+}
+.add{
+	position: absolute;
+	right: 1rem;
+	top: 0px;
+	line-height: 2rem;
+}
+.card{
+	width: 100%;
+}
+.content{
+	margin: 3rem .5rem;
+}
+.cardback{
+	background-image:url(../img/schoolCard.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 1rem 0;
+	color: white;
+	height: 10rem;
+	
+}
+ul li{
+	line-height:3.6rem;
+	font-size: 1.1rem;
+}
+ul{
+	margin: 0 4rem;
+}
+a{
+	color: white;
+}
+.layui-layer{
+	background-color: transparent !important; 
+	box-shadow: none !important;
+}
+.layui-layer-hui .layui-layer-content{
+	background-color: darkgray;
+}
+/*二次弹窗内容*/
+.opendiv{
+	display: none;
+	background-color: white;
+}
+.untyTitle{
+	text-align: center;
+	line-height: 4rem;
+}
+button{
+	width: 45%;
+	color: rgba(72, 156, 245, 1);
+	line-height: 2.4rem;
+	margin: .2rem;
+	border-radius: 10px;
+	background-color: white;
+	border: none;
+}
+/*结束*/
+/*一次弹窗内容*/
+.layui-layer-btn .layui-layer-btn0{
+	width: 100%;
+	color: rgba(72, 156, 245, 1) !important;
+	margin: .2rem;
+	border-radius: 10px;
+	background-color: white !important;
+	border: none;
+	text-align: center;
+}
+.layui-layer-btn a{
+	padding: 0 0 !important;
+}
+.layui-layer-btn .layui-layer-btn1{
+	width: 100%;
+	margin: .2rem;
+	border-radius: 10px;
+	background-color: white;
+	border: none;
+	text-align: center;
+}
+
+
+/*一次弹窗内容结束*/
+.cardSize{
+	float: right;
+    width: 5.5rem;
+    text-align: center;
+}

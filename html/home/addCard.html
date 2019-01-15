@@ -7,41 +7,39 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../../layui/css/layui.css" />
 		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/addCard.css" />
 		<link rel="stylesheet" href="../../css/login.css" />
-		<title>实名认证</title>
+		<title>添加银行卡</title>
 	</head>
 
 	<body>
 		<div class="layui-fluid">
 			<div>
-				<a href="###" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
-				<h2 class="file-title">忘记密码</h2>
-				<a href="首页地址" class="next">跳过</a>
+				<a href="" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
+				<h2 class="file-title">添加银行卡</h2>
 			</div>
-
-			<form class="layui-form authen" action="">
+			<form class="layui-form authen" action="" name="" method="post">
 				<div class="layui-form-item onerow">
-					<input type="text" id="username" name="number" placeholder="请输入姓名" lay-verify="required" class="layui-input">
+					<input type="text" id="username" name="number" value="" placeholder="请输入姓名" lay-verify="required" class="layui-input" required>
 				</div>
 				<div class="layui-form-item">
-					<input id="id-card" type="text" name="" placeholder="请输入身份证号" lay-verify="required" class="layui-input" required>
-					<!--	<span class="display">身份证号格式不正确！</span>-->
+					<input id="id-card" type="text" name="idcard" value="" placeholder="请输入身份证号" lay-verify="required" class="layui-input" required>
 				</div>
 				<div class="layui-form-item">
-					<input id="account" type="text" name="" placeholder="请输入农信银行卡号" onkeyup="formatBankNo(this)" onkeydown="formatBankNo(this)" lay-verify="required" class="layui-input" required>
+					<input id="account" type="text" name="account" value="" placeholder="请输入银行卡号(目前只支持广西农信卡)" onkeyup="formatBankNo(this)" onkeydown="formatBankNo(this)" lay-verify="required" class="layui-input" required>
 				</div>
 				<div class="layui-form-item">
-					<input id="phone" type="phone" name="" placeholder="请输入手机号" lay-verify="required" class="layui-input" required>
+					<input id="phone" type="phone" name="phone" value="" placeholder="150***76096" lay-verify="required" class="layui-input" required>
 					<a href="javascript:;" class="getCode" id="getCode" onclick="getCode(this)">获取验证码</a>
 					<a href="javascript:;" class="getCode" id="resetCode" style="display:none;"><span id="second">60</span>秒后重发</a>
 					<a href="javascript:;" class="getCode" id="resetGetCode" onclick="getCode(this)" style="display:none;">重新获取</a>
 				</div>
 				<div class="layui-form-item">
 					<div class="formInputBox">
-						<input type="text" id="code" name="code" required lay-verify="required" placeholder="请输入验证码   " autocomplete="off" class="layui-input formInput">
-
+						<input type="text" id="code" name="code" required lay-verify="required" placeholder="请输入短信验证码   " autocomplete="off" class="layui-input formInput" required>
 					</div>
 				</div>
+				<p class="layui-word-aux explain">说明：添加银行卡，以在相关应用中使用</p>
 				<input type="submit" class="layui-btn submit_btn" lay-submit=""></input>
 			</form>
 		</div>
@@ -50,10 +48,10 @@
 		<script>
 			layui.use(['form'], function() {
 				var form = layui.form;
-
+	
 			});
 		</script>
-		<script>
+		<script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 			// 判断身份证格式是否正确
 			$('#id-card').blur(function() {
 				var idcard = $('#id-card').val();
