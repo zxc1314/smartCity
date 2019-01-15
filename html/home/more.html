@@ -192,8 +192,9 @@
 			{{# } }}
 		</script>
 		<script>
-			layui.use('laytpl', function() {
+			layui.use(['laytpl','layer'], function() {
 				var laytpl = layui.laytpl;
+				    layer = layui.layer;
 				var appData = { //数据
 					"title": "应用模板引擎",
 					"appList": [{
@@ -264,8 +265,11 @@
 				 $(".end").css("display","block");
 				 $(".reduce").css("display","block");
 				 $(".addAplay").css("display","block")
-				 
+			 $(".reduce").on('click', function() {
+				 $(".reduce").className="addAplay";
 			});
+			});
+			
 		</script>
 	</body>
 
