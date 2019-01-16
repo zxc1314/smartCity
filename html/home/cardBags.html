@@ -15,7 +15,7 @@
 	<body>
 		<div class="layui-fluid">
 			<div>
-				<a href="" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
+				<a href="javascript:history.back(-1);" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
 				<h2 class="file-title">卡包</h2>
 				<a href="addCard.html" class="add"><i class="layui-icon">&#xe654;</i></a>
 			</div>
@@ -45,8 +45,9 @@
 			{{# }); }} {{# if(d.appList.length === 0){ }} {{# } }}
 		</script>
 		<script>
-			layui.use('laytpl', function() {
+			layui.use(['laytpl','layer'], function() {
 				var laytpl = layui.laytpl;
+				var layer = layui.layer;
 				var appData = { //数据
 					"title": "应用模板引擎",
 					"appList": [{
@@ -59,7 +60,7 @@
 							"cardImg": "../../img/sy_gjc.png",
 							"cardName": "广西农信信用社",
 							"cardWeihao": "2013 1811 132",
-							"cardType": "信用卡"
+							"cardType": "储蓄卡"
 						},
 						{
 							"cardImg": "../../img/sy_gjc.png",
@@ -83,15 +84,8 @@
 				laytpl(getAppTpl).render(appData, function(html) {
 					appView.innerHTML = html;
 				});
-			});
-		</script>
-		<!--弹窗-->
-		<script type="text/javascript">
-			layui.use('layer', function() {
-				var layer = layui.layer;
-
-			});
-			$("#viewContent").on('click', function() {
+				<!--弹窗-->
+			$(".transitCard").on('click', function() {
 				layer.confirm('', {
 					title: false,
 					closeBtn: false,
@@ -125,7 +119,9 @@
 				layer.close(layer.index - 1);
 				layer.close(layer.index - 2);
 			});
+			});
 		</script>
+		
 	</body>
 
 </html>

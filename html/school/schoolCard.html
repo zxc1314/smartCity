@@ -8,13 +8,13 @@
 		<link rel="stylesheet" href="../../layui/css/layui.css" />
 		<link rel="stylesheet" href="../../css/base.css" />
 		<link rel="stylesheet" href="../../css/schoolCard.css" />
-		<title>卡包</title>
+		<title>学校卡包</title>
 	</head>
 
 	<body>
 		<div class="layui-fluid">
 			<div>
-				<a href="" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
+				<a href="javascript:history.back(-1);" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
 				<h2 class="file-title">解绑</h2>
 			</div>
 			<div class="layui-row contentBox" id="content">
@@ -43,8 +43,9 @@
 			{{# } }}
 		</script>
 		<script>
-			layui.use('laytpl', function() {
+			layui.use(['laytpl','layer'], function() {
 				var laytpl = layui.laytpl;
+				var layer = layui.layer;
 				var appData = { //数据
 					"title": "应用模板引擎",
 					"appList": [{
@@ -78,16 +79,8 @@
 				laytpl(getAppTpl).render(appData, function(html) {
 					appView.innerHTML = html;
 				});
-			});
-		</script>
-		<!--弹窗-->
-		<script type="text/javascript">
-			layui.use('layer', function() {
-				var layer = layui.layer;
-				
-			});
-			//点击卡出现弹窗暂未完成
-			$("#content").on('click', function() {
+				//点击卡出现弹窗
+			$(".content").on('click', function() {
 				layer.confirm('', {
 					title: false,
 					closeBtn: false,
@@ -119,7 +112,8 @@
 				layer.close(layer.index-1);
 				layer.close(layer.index-2);
 			});
-			
+			});
+		</script>
 		</script>
 	</body>
 
