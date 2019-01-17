@@ -254,3 +254,56 @@
 #anchorBox li {
   margin-top:2px;
 }
+/*公交充值页面样式*/
+.cardContent{
+	margin:0 -15px;
+  padding:0rem 1rem;
+  background-color: rgb(78,155,245);
+  height: 12rem;
+}
+.CardBox{
+	margin-top: -7rem;
+}
+.cardTitle{
+	font-size:1.25rem;
+  height:3rem;
+  line-height:3rem;
+  text-align:center;
+  color: white;
+}
+.cardBack{
+	position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+}
+.transitCard {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(92, 209, 222, 1);
+    border-radius: 10px;
+    box-shadow: 0px 20px 30px rgba(58, 165, 216, 0.349019607843137);
+    padding: 10px;
+    color: #fff;
+    text-align: right;
+    font-size: 1.1rem;
+}
+.transitCard p.title {
+	text-align: left;
+}
+.transitCard p.title img {
+	width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 10px;
+}
+.transitCard p.cardNum {
+    font-size: 2.2rem;
+    margin: 30px auto 15px;
+}
+.transitCard p.cardName span {
+	padding: 4px 10px;
+    background: rgba(255,255,255,.5);
+    margin-right: -10px;
+    font-size: 1rem;
+}

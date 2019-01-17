@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>公交充值</title>
+		<link rel="stylesheet" href="../../layui/css/layui.css">
+		<link rel="stylesheet" href="../../css/base.css">
+		<link rel="stylesheet" href="../../css/recharge.css">
+	</head>
+
+	<body>
+		<div class="layui-fluid">
+			<div class="layui-row cardContent">
+				<h2 class="cardTitle">
+                    <a href="javascript:history.back(-1)" class="cardBack">
+                        <i class="layui-icon layui-icon-left"></i> 返回
+                    </a>
+                    充值
+                </h2>
+			</div>
+			<!--卡内容-->
+			<div class="layui-row CardBox">
+				<div class="layui-col-xs10 layui-col-xs-offset1 transitCard">
+					<p class="title"><img src="../../img/sy_gjc.png">广西农信城市云卡</p>
+					<p class="cardNum">2013 1811 132</p>
+					<p class="cardName"><span>城市云卡</span></p>
+				</div>
+			</div>
+
+			<!-- 充值金额 -->
+			<div class="layui-row rechargeAmount">
+				<h2 class="payTitle">
+                    充值金额
+                </h2>
+				<div class="layui-row layui-col-space20 amount">
+					<div class=" layui-col-xs4">
+						<div class="amountNum">
+							10元
+						</div>
+					</div>
+					<div class=" layui-col-xs4">
+						<div class="amountNum">
+							20元
+						</div>
+					</div>
+					<div class=" layui-col-xs4">
+						<div class="amountNum">
+							30元
+						</div>
+					</div>
+					<div class=" layui-col-xs4">
+						<div class="amountNum">
+							50元
+						</div>
+					</div>
+					<div class=" layui-col-xs4">
+						<div class="amountNum">
+							100元
+						</div>
+					</div>
+					<div class=" layui-col-xs4">
+						<input type="text" class="amountNum" id="customAmount" autocomplete="off" placeholder="自定义金额" class="layui-input" readonly="readonly">
+					</div>
+				</div>
+			</div>
+			<!-- end-充值金额 -->
+			<!-- 温馨提示 -->
+			<div class="layui-row">
+				<p class="tips">
+					温馨提示
+				</p>
+				<p class="tipsContent">
+					请在网络畅通的环境下充值，以免造成不必要的麻烦。
+				</p>
+			</div>
+			<!-- end-温馨提示 -->
+			<!-- 支付方式 -->
+			<div class="layui-row">
+				<p class="payMethod">
+					支付方式
+				</p>
+				<div class="layui-row payBox">
+					<div class=" layui-col-xs6">
+						<a href="javascript:;" id="ePay">
+							<div class="img-txt">
+								<img src="../../img/logo.jpg" alt="">
+								<span>
+									农信e支付
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<hr />
+			</div>
+			<!-- end-支付方式 -->
+		</div>
+		<script id="moneyInput" type="text/html">
+			<div id="moneyInput" style="margin: 20px;">
+				<div class="layui-form-item">
+					<label class="layui-form-label"> 充值金额 </label>
+					<div class="layui-input-block">
+						<input type="text" name="customAmount" required lay-verify="required" placeholder="请输入充值金额" class="layui-input">
+					</div>
+				</div>
+			</div>
+		</script>
+		<!-- end-智慧城市消息通知模板引擎 -->
+		<script src="../../js/jquery-3.3.1.min.js"></script>
+		<script src="../../layui/layui.js"></script>
+		<script>
+			layui.use(['form', 'layer', 'element'], function() {
+				var form = layui.form,
+					layer = layui.layer,
+					element = layui.element;
+				//监听提交
+				form.on('submit(formDemo)',
+					function(data) {
+						layer.msg(JSON.stringify(data.field));
+						return false;
+					});
+
+				//充值金额点击改变样式
+				$(".rechargeAmount").on("click", ".amountNum", function() {
+					var $this = $(this);
+					$this.addClass("activeTrue").parent().siblings().find(".amountNum").removeClass("activeTrue");
+				});
+				$('#customAmount').on('click',
+					function() {
+						layer.open({
+							type: 1,
+							title: '自定义金额',
+							content: $('#moneyInput').html(),
+							btn: ['确认', '取消'],
+							area: ['300px', '170px'],
+							yes: function(index) {
+								var customAmountVal = $("input[name='customAmount']").val();
+								//正则验证,只能输入数字与小数点
+								var numPoint = /^(?!0$|0\.00|0\.0|0\d+$)([1-9]?\d+(\.\d*)|(\\s&&[^\\f\\n\\r\\t\\v])|([1-9]*[1-9][0-9]*)?)$/;
+								if(!customAmountVal) {
+									layer.msg("请输入金额!");
+								} else if(!numPoint.test(customAmountVal)) {
+									layer.msg("请输入正确格式金额!");
+								} else {
+									$("#customAmount").val(customAmountVal);
+									layer.close(index);
+								}
+
+							}
+						});
+					});
+			});
+		</script>
+		<script>
+			// 农信e支付调用接口
+			$('#ePay').on('click',
+				function() {
+					$.ajax({
+						url: '/getePay',
+						type: 'post',
+						data: {},
+						dataType: 'json',
+						success: function(data) {
+							console.log(data);
+
+						}
+					});
+				});
+		</script>
+	</body>
+
+</html>
