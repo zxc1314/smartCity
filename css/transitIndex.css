@@ -123,3 +123,92 @@
 	color: #666;
 
 }
+.cardBalance {
+	background-color: #45A7F1;
+    color: #fff;
+}
+.cardBalance h2,.cardBalance a {
+	color: #fff;
+}
+.available {
+	padding-bottom: 10px;
+}
+.available p {
+	font-size: .85rem;
+	color: #fff;
+	margin: 15px 0 15px 10px;
+}
+.available p.availableMoney {
+	font-size: 2.5rem;
+}
+.transactionRecord {
+	background-color: #61B9FC;
+	margin: auto -15px; 
+}
+.transactionRecord>div:first-child {
+    border-right: 1px solid #fff;
+}
+.recordBalance {
+	height: 76px;
+	line-height: 76px;
+	text-align: center;
+	color: #fff;
+	font-size: .95rem;
+}
+.cardDetails li {
+	font-size: 1rem;
+    width: 33%;
+    padding: 0;
+}
+.cardDetails li.layui-this {
+	color: #333!important;
+	font-weight: 400;
+}
+.cardDetails li.layui-this:after {
+    border-bottom: 3px solid #797979!important;
+}
+.cardDetails .layui-tab-content {
+	padding-top: 0;
+}
+.seachDetail {
+	background-color: #F2F2F2;
+	height: 49px;
+	line-height: 49px;
+    margin: 0 -25px;
+}
+.seachDetail>div {
+	text-align: center;
+}
+.seachDetail>div i {
+	font-size: 1.2rem;
+}
+.seachDetail>div.seachHelp {
+    text-align: left;
+    padding-left: 1rem;
+    height: 25px;
+    line-height: 25px;
+    color: #999;
+}
+.seachContent p {
+	color: #999;
+	margin: 5px auto;
+}
+.seachContent p.detailsType {
+	color: #333;
+	font-weight: 700;
+}
+.seachContent p.detailsMoney{
+	color: #333;
+	font-weight: 700;
+    text-align: right;
+    margin-top: 27px;
+}
+.seachContent p.detailsStatus{
+	font-size: 12px;
+    color: #EE4462;
+    text-align: right;
+}
+.seachContent .seachContentBox {
+    border-bottom: 1px solid #636161;
+    margin-top: 20px;
+}
