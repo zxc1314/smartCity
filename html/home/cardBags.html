@@ -15,12 +15,12 @@
 	<body>
 		<div class="layui-fluid">
 			<div>
-				<a href="" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
-				<h2 class="file-title">家长管控</h2>
+				<a href="javascript:history.back(-1);" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
+				<h2 class="file-title">卡包</h2>
 				<a href="addCard.html" class="add"><i class="layui-icon">&#xe654;</i></a>
 			</div>
 			<!--卡包信息-->
-			<div class="content" id="viewContent">
+			<div class="layui-row transitCardBox " id="viewContent">
 			</div>
 			<!--点击“解绑”出现的弹窗内容-->
 			<div class="opendiv" id="opendiv" data-method="offset" data-type="c">
@@ -36,57 +36,37 @@
 		<!--引用模板引擎-->
 		<script id="appContent" type="text/html">
 			{{# layui.each(d.appList, function(index, item){ }}
-			<div class="layui-col-xs12 background">
-				<ul>
-					<li>{{ item.cardName }}</li>
-					<li class="cardId">{{ item.cardWeihao }}</li>
-				</ul>
-				<span class="cardSize">{{ item.cardType }}</span>
+			<div class="layui-col-xs10 layui-col-xs-offset1 transitCard">
+				<p class="title"><img src="{{ item.cardImg }}">{{ item.cardName }}</p>
+				<p class="cardNum">{{ item.cardWeihao }}</p>
+				<p class="cardName"><span>{{ item.cardType }}</span></p>
 			</div>
 			<!--无数据时-->
-			{{# }); }} {{# if(d.appList.length === 0){ }}
-			<div class="layui-col-xs12 background">
-				<ul>
-					<li>广西农村信用社</li>
-					<li class="cardId">1237</li>
-				</ul>
-				<span class="cardSize">校园卡</span>
-			</div>
-			<div class="layui-col-xs12 background">
-				<ul>
-					<li>广西农村信用社</li>
-					<li class="cardId">6789</li>
-				</ul>
-				<span class="cardSize">校园卡</span>
-			</div>
-			<div class="layui-col-xs12 background">
-				<ul>
-					<li>广西农村信用社</li>
-					<li class="cardId">5678</li>
-				</ul>
-				<span class="cardSize">校园卡</span>
-			</div>
-			{{# } }}
+			{{# }); }} {{# if(d.appList.length === 0){ }} {{# } }}
 		</script>
 		<script>
-			layui.use('laytpl', function() {
+			layui.use(['laytpl','layer'], function() {
 				var laytpl = layui.laytpl;
+				var layer = layui.layer;
 				var appData = { //数据
 					"title": "应用模板引擎",
 					"appList": [{
-							"cardName": "广西农村信用社",
-							"cardWeihao": "***********345",
-							"cardType":"储蓄卡"
+							"cardImg": "../../img/sy_gjc.png",
+							"cardName": "广西农信信用社",
+							"cardWeihao": "2013 1811 132",
+							"cardType": "信用卡"
 						},
 						{
-							"cardName": "广西农村信用社",
-							"cardWeihao": "***********345",
-							"cardType":"储蓄卡"
+							"cardImg": "../../img/sy_gjc.png",
+							"cardName": "广西农信信用社",
+							"cardWeihao": "2013 1811 132",
+							"cardType": "储蓄卡"
 						},
 						{
-							"cardName": "广西农村信用社",
-							"cardWeihao": "***********345",
-							"cardType":"储蓄卡"
+							"cardImg": "../../img/sy_gjc.png",
+							"cardName": "广西农信信用社",
+							"cardWeihao": "2013 1811 132",
+							"cardType": "信用卡"
 						}
 					]
 				}
@@ -104,15 +84,8 @@
 				laytpl(getAppTpl).render(appData, function(html) {
 					appView.innerHTML = html;
 				});
-			});
-		</script>
-		<!--弹窗-->
-		<script type="text/javascript">
-			layui.use('layer', function() {
-				var layer = layui.layer;
-
-			});
-			$(".content").on('click', function() {
+				<!--弹窗-->
+			$(".transitCard").on('click', function() {
 				layer.confirm('', {
 					title: false,
 					closeBtn: false,
@@ -146,7 +119,9 @@
 				layer.close(layer.index - 1);
 				layer.close(layer.index - 2);
 			});
+			});
 		</script>
+		
 	</body>
 
 </html>

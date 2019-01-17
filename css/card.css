@@ -27,36 +27,6 @@ body{
 	top: 0px;
 	line-height: 2rem;
 }
-.cardId{
-	text-align: center;
-}
-.card{
-	width: 100%;
-}
-.cardSize{
-	float: right;
-	width: 5rem;
-    height: 1.3rem;
-    background-color: lightgray;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-.content{
-	margin: 3rem .5rem;
-}
-.background{
-	background-color: rgb(51,204,153);
-	margin: 1rem 0;
-	color: white;
-	
-}
-ul li{
-	line-height:3.6rem;
-	font-size: 1.1rem;
-}
-ul{
-	margin: 0 4rem;
-}
 a{
 	color: white;
 }
@@ -109,3 +79,33 @@ button{
 
 
 /*一次弹窗内容结束*/
+/*第二次更改*/
+.transitCard {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    background-color: rgba(92, 209, 222, 1);
+    border-radius: 10px;
+    box-shadow: 0px 20px 30px rgba(58, 165, 216, 0.349019607843137);
+    padding: 10px;
+    color: #fff;
+    text-align: right;
+    font-size: 1.1rem;
+}
+.transitCard p.title {
+	text-align: left;
+}
+.transitCard p.title img {
+	width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 10px;
+}
+.transitCard p.cardNum {
+    font-size: 2.2rem;
+    margin: 30px auto 15px;
+}
+.transitCard p.cardName span {
+	padding: 4px 10px;
+    background: rgba(255,255,255,.5);
+    margin-right: -10px;
+    font-size: 1rem;
+}
