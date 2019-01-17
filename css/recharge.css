@@ -1,316 +1,259 @@
 .payContent {
-	margin: 0 -15px;
-	padding: 0rem 1rem;
-	background-color: #005FA6;
+  margin:0 -15px;
+  padding:0rem 1rem;
+  background-color:#005FA6;
 }
-
 .ofenPayContent {
-	color: #000;
-	background-color: #fff;
+  color:#000;
+  background-color:#fff;
 }
-
 .back {
-	position: absolute;
-	left: 1rem;
-	font-size: 1rem;
-	text-align: center;
-	color: #fff;
-	background-color: rgba(153, 153, 153, 0);
+  position:absolute;
+  left:1rem;
+  font-size:1rem;
+  text-align:center;
+  color:#fff;
+  background-color:rgba(153,153,153,0);
 }
-
 .ofenBack {
-	color: #489CF5;
+  color:#489CF5;
 }
-
 .oftenRecharge {
-	position: absolute;
-	right: 1rem;
-	font-size: 1rem;
-	text-align: center;
-	color: #fff;
-	background-color: rgba(153, 153, 153, 0);
+  position:absolute;
+  right:1rem;
+  font-size:1rem;
+  text-align:center;
+  color:#fff;
+  background-color:rgba(153,153,153,0);
 }
-
 .oftenRecharge:hover {
-	color: #fff;
+  color:#fff;
 }
-
 .rechargeTitle {
-	font-size: 1.25rem;
-	height: 3rem;
-	line-height: 3rem;
-	text-align: center;
-	color: #fff;
+  font-size:1.25rem;
+  height:3rem;
+  line-height:3rem;
+  text-align:center;
+  color:#fff;
 }
-
 .ofenPayContent .rechargeTitle {
-	color: #000;
+  color:#000;
 }
-
 .recharge-form {
-	padding: 2rem 1rem 1rem;
+  padding:2rem 1rem 1rem;
 }
-
 .recharge-for select {
-	background-color: rgba(63, 183, 246, 1) !important;
+  background-color:rgba(63,183,246,1) !important;
 }
-
 .formImg {
-	float: right;
-	display: block;
-	padding: 2px 0;
-	width: 4.5rem;
-	font-weight: 400;
-	line-height: 20px;
-	text-align: center;
-	color: #fff;
-	background: none;
-	border: none;
+  float:right;
+  display:block;
+  padding:2px 0;
+  width:4.5rem;
+  font-weight:400;
+  line-height:20px;
+  text-align:center;
+  color:#fff;
+  background:none;
+  border:none;
 }
-
 .formImg i {
-	font-size: 1.8rem;
-	line-height: 38px;
+  font-size:1.8rem;
+  line-height:38px;
 }
-
 .formInput input {
-	background: none;
-	color: #fff;
-	border-radius: 7px;
+  background:none;
+  color:#fff;
+  border-radius:7px;
 }
-
 .formInput .layui-input::-webkit-input-placeholder {
-	color: #fff;
+  color:#fff;
 }
-
 .formInput .layui-input:-moz-placeholder {
-	color: #fff;
+  color:#fff;
 }
-
 .formInput .layui-input::-moz-placeholder {
-	color: #fff;
+  color:#fff;
 }
-
 .formInput .layui-input:-ms-input-placeholder {
-	color: #fff;
+  color:#fff;
 }
-
-.cardType {}
-
-
+.cardType {
+  }.cardNum {
+  margin:0 5rem 10px 3px!important;
+}
 /*姓名卡状态*/
-
 .nameCard {
-	margin-top: 20px;
-	border: 1px solid #F5F5F5;
-	border-radius: 8px;
-	box-shadow: 0px 0px 6px #F5F5F5;
-	color: #757779;
+  margin-top:20px;
+  border:1px solid #F5F5F5;
+  border-radius:8px;
+  box-shadow:0px 0px 6px #F5F5F5;
+  color:#757779;
 }
-
 .nameCard .layui-form-label {
-	float: left;
-	display: block;
-	padding: 9px 15px;
-	width: 57px;
-	font-weight: 400;
-	line-height: 20px;
-	text-align: right;
+  float:left;
+  display:block;
+  padding:9px 15px;
+  width:57px;
+  font-weight:400;
+  line-height:20px;
+  text-align:right;
 }
-
 .nameCard .layui-input-block {
-	margin-left: 88px;
-	min-height: 36px;
+  margin-left:88px;
+  min-height:36px;
 }
-
 .nameCard .layui-input-block input {
-	border: none;
-	color: #757779;
+  border:none;
+  color:#757779;
 }
-
-
 /* 充值金额 */
-
 .payTitle {
-	margin: 2rem 0 1rem;
-	font-size: 16px;
-	font-weight: 600;
+  margin:2rem 0 1rem;
+  font-size:16px;
+  font-weight:600;
 }
-
 .amountNum {
-	line-height: 50px;
-	text-align: center;
-	color: #050505;
-	border-radius: 10px;
-	border: 1px solid #888;
-	width: 100%;
+  line-height:50px;
+  text-align:center;
+  color:#050505;
+  border-radius:10px;
+  border:1px solid #888;
+  width:100%;
 }
-
 .activeTrue {
-	border-color: #005FA6;
-	color: #005FA6;
+  border-color:#005FA6;
+  color:#005FA6;
 }
-
-
 /* 温馨提示 */
-
 .tips {
-	margin: 8px 0;
-	font-size: 13px;
-	font-weight: 600;
+  margin:8px 0;
+  font-size:13px;
+  font-weight:600;
 }
-
 .tipsContent {
-	margin: 8px 0;
-	font-size: 12px;
+  margin:8px 0;
+  font-size:12px;
 }
-
 .payMethod {
-	font-size: 17px;
+  font-size:17px;
 }
-
-
 /* 支付方式 */
-
 .payBox {
-	margin: 2rem 1rem 1rem;
+  margin:2rem 1rem 1rem;
 }
-
 .payBox .img-txt {
-	text-align: center;
+  text-align:center;
 }
-
 .payBox .img-txt img {
-	width: 2.5rem;
-	height: 2.5rem;
+  width:2.5rem;
+  height:2.5rem;
 }
-
-
 /*常用充值*/
 
 #oftenNameCard {
-	margin: 0 -15px;
-	padding-bottom: 50px;
+  margin:0 -15px;
+  padding-bottom:50px;
 }
-
 .cardBox {
-	height: 90px;
-	margin-top: 10px;
-	background-color: #fff;
-	padding: 0 0 0 15px;
-	line-height: 90px;
+  height:90px;
+  margin-top:10px;
+  background-color:#fff;
+  padding:0 0 0 15px;
+  line-height:90px;
 }
-
 .cardBox p {
-	font-size: .9rem;
-	line-height: 23px;
-	height: 23px;
+  font-size:.9rem;
+  line-height:23px;
+  height:23px;
 }
-
 .cardBox p:first-child {
-	margin-top: 10px;
+  margin-top:10px;
 }
-
 .cardDel {
-	display: none;
-	height: 90px;
-	line-height: 90px;
-	background-color: #CC0000;
-	text-align: center;
-	color: #fff;
+  display:none;
+  height:90px;
+  line-height:90px;
+  background-color:#CC0000;
+  text-align:center;
+  color:#fff;
 }
-
 #cardQuery .schoolQuery {
-	background: none;
-	border: none;
-	color: #fff;
+  background:none;
+  border:none;
+  color:#fff;
 }
-
 #cardQuery .layui-form-label {
-	padding: 9px;
-	text-align: left;
-	color: #fff;
+  padding:9px;
+  text-align:left;
+  color:#fff;
 }
-
 #cardQuery .layui-btn {
-	width: 100%;
-	background-color: #D9E5FA;
-	color: #4889EF;
+  width:100%;
+  background-color:#D9E5FA;
+  color:#4889EF;
 }
-
 .cardBoxQuery {
-	background-color: #97A6F9;
-	box-shadow: 3px 3px 8px #97A6F9;
-	border-radius: 10px;
-	color: #333;
+  background-color:#97A6F9;
+  box-shadow:3px 3px 8px #97A6F9;
+  border-radius:10px;
+  color:#333;
 }
-
 .seachSchool .layui-form-item {
-	position: relative;
-	margin: 8px auto;
-	line-height: 38px;
+  position:relative;
+  margin:8px auto;
+  line-height:38px;
 }
-
 .seachSchool .seachBtn {
-	position: absolute;
-	padding-left: 5px;
-	border: none;
-	background: none;
-	height: 38px;
-	line-height: 38px;
+  position:absolute;
+  padding-left:5px;
+  border:none;
+  background:none;
+  height:38px;
+  line-height:38px;
 }
-
 .seachSchool .seachBtn i {
-	font-size: 1.2rem;
+  font-size:1.2rem;
 }
-
 .seachSchool .schoolQuery {
-	padding-left: 30px;
-	border: none;
-	border-radius: 7px;
+  padding-left:30px;
+  border:none;
+  border-radius:7px;
 }
-
 #chooseSchool .firstCode {
-	margin: 0 -15px;
-	padding: 0 15px;
-	height: 35px;
-	line-height: 35px;
-	font-size: 1rem;
-	color: #333;
-	border-bottom: 1px solid #e8e5e5;
-	border-top: 1px solid #e8e5e5;
+  margin:0 -15px;
+  padding:0 15px;
+  height:35px;
+  line-height:35px;
+  font-size:1rem;
+  color:#333;
+  border-bottom:1px solid #e8e5e5;
+  border-top:1px solid #e8e5e5;
 }
-
 #chooseSchool .schoolList {
-	margin: 0 -15px;
-	padding: 5px 15px 0px;
-	background-color: #fff;
+  margin:0 -15px;
+  padding:5px 15px 0px;
+  background-color:#fff;
 }
-
 #chooseSchool .schoolList li {
-	margin-top: 10px;
-	border-bottom: 1px solid #eee;
-	padding-bottom: 5px;
+  margin-top:10px;
+  border-bottom:1px solid #eee;
+  padding-bottom:5px;
 }
-
 #chooseSchool .schoolList li img {
-	width: 30px;
-	height: 30px;
-	vertical-align: middle;
+  width:30px;
+  height:30px;
+  vertical-align:middle;
 }
-
 #anchorBox {
-	position: fixed;
-	right: 15px;
-	bottom: 50%;
-	text-align: center;
+  position:fixed;
+  right:15px;
+  bottom:50%;
+  text-align:center;
 }
-
 #anchorBox li {
-	margin-top: 2px;
+  margin-top:2px;
 }
-
-
 /*公交充值页面样式*/
 
 .cardContent {
