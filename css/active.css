@@ -56,3 +56,9 @@
 .activeMsg{
 	margin-top:1rem;
 }
+.oneMore{
+	float: right;
+	color:rgb(72, 156, 245) ;
+	font-size: 1rem;
+	position: absolute;right: 1rem;
+}
