@@ -129,17 +129,6 @@
 
 /*常用地选择*/
 
-.title {
-	position: relative;
-	width: 100%;
-	text-align: center;
-}
-
-.wheel-scroll.wheel-scroll-hook {
-	margin: 0;
-	padding: 0;
-}
-
 .pick {
 	float: right;
 	border: none;
@@ -149,7 +138,37 @@
 .right {
 	float: right;
 }
-
+.listContent {
+	margin: 0 -15px;
+    padding: 0rem 1rem;
+    color: #000;
+    background-color: #fff;
+}
+.back {
+	position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: rgba(72, 156, 245, 1);
+    background-color: rgba(153,153,153,0);
+}
+.listTitle {
+	font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #000;
+}
+.nextHtml{
+	position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+    color: rgba(72, 156, 245, 1);
+    background-color: rgba(153,153,153,0);
+}
+.contentBox{
+	margin-top: 2rem;
+}
 
 /*实名认证*/
 

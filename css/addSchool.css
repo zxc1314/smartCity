@@ -1,0 +1,47 @@
+.schoolContent {
+	margin: 0 -15px;
+    padding: 0rem 1rem;
+    color: #000;
+    background-color: #fff;
+}
+.back {
+	position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: rgba(72, 156, 245, 1);
+    background-color: rgba(153,153,153,0);
+}
+.schoolTitle {
+	font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #000;
+}
+.layui-form-item{
+	border-bottom: 1px solid gainsboro
+}
+.layui-form-label{
+	padding: 9px 0;
+    text-align: left;
+}
+.layui-input, .layui-textarea{
+	border: none;
+    text-align: right;
+}
+.layui-form-select dl dd.layui-this{
+	    background-color: rgb(72, 156, 245, 1);
+}
+.layui-select-title{
+	border: 1px solid gainsboro;
+}
+.warn{
+	font-size: 1rem;
+	color: gray;
+}
+.addBtn{
+	width: 100%;
+	margin-top: 2.5rem;
+	background-color: rgb(72, 156, 245, 1);
+}

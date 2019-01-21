@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../../layui/css/layui.css" />
+		<link rel="stylesheet" href="../../css/base.css" />
+		<link rel="stylesheet" href="../../css/addSchool.css" />
+		<title>添加学校</title>
+	</head>
+
+	<body>
+		<div class="layui-fluid">
+			<div class="layui-row schoolContent">
+				<h2 class="schoolTitle">
+                    <a href="javascript:history.back(-1)" class="back">
+                        <i class="layui-icon layui-icon-left"></i> 返回
+                    </a>
+                   添加
+               </h2>
+				<div class="layui-row contentBox" id="content">
+					<form class="layui-form" action="">
+						<div class="layui-form-item">
+							<label class="layui-form-label">选择学校</label>
+							<div class="layui-input-inline">
+								<select name="school" id="school">
+									<!--<option value="0" selected="">中国传媒大学</option>
+									<option value="1">河南大学</option>
+									<option value="2">清华大学</option>-->
+								</select>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">姓名</label>
+							<div class="layui-input-block">
+								<input type="text" name="username" lay-verify="required" placeholder="张三" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">身份证号</label>
+							<div class="layui-input-block">
+								<input id="id-card" type="text" name="cardId" placeholder="410122199508048023" class="layui-input" lay-verify="required" required>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">学号</label>
+							<div class="layui-input-block">
+								<input type="text" name="number" placeholder="201401014102" class="layui-input" lay-verify="required">
+							</div>
+						</div>
+						<p class="warn">说明：绑定校园卡，以在校园应用中使用</p>
+						<button class="layui-btn addBtn" lay-submit="" lay-filter="demo1">添加</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+	<script src="../../layui/layui.js" charset="utf-8"></script>
+	<!--获取所有学校的模板引擎-->
+	<script id="appContent" type="text/html">
+		{{# layui.each(d.schoolList, function(index, item){ }}
+		<option value="{{ item.schoolId }}">{{ item.schoolName }}</option>
+		<!--无数据时-->
+		{{# }); }} {{# if(d.schoolList.length === 0){ }} {{# } }}
+	</script>
+	<script>
+		layui.use(['laytpl', 'layer'], function() {
+			var laytpl = layui.laytpl;
+			var layer = layui.layer;
+			var appData = { //数据
+				"title": "应用模板引擎",
+				"schoolList": [{
+						"schoolId": "0",
+						"schoolName": "河南大学"
+					},
+					{
+						"schoolId": "1",
+						"schoolName": "清华大学"
+					},
+					{
+						"schoolId": "2",
+						"schoolName": "哈佛大学"
+					}
+				]
+			}
+			// $.ajax({
+			// 	url: '',
+			// 	type: 'post',
+			// 	data: {
+			// 	},
+			// 	dataType: 'json',
+			// 	success: function (data) {
+			// 		console.log(data);3
+			// 	}
+			var getAppTpl = appContent.innerHTML,
+				appView = document.getElementById('school');
+			laytpl(getAppTpl).render(appData, function(html) {
+				appView.innerHTML = html;
+			});
+		});
+	</script>
+	<!--end-->
+	<script>
+		layui.use(['form', 'layedit', 'laydate'], function() {
+			var form = layui.form;
+			//监听提交
+			/*  form.on('submit(demo1)', function(data){
+			    layer.alert(JSON.stringify(data.field), {
+			      title: '最终的提交信息'
+			    })
+			    return false;
+			  });*/
+			form.on('submit(demo1)', function(data) {
+				$.ajax({
+					url: '',
+					type: 'post',
+					data: {
+						data: data.field
+					},
+					dataType: 'json',
+					success: function(data) {
+						console.log(data);
+						if(data) {
+							setTimeout(function() {
+								window.location.href = "addSuccess.html";
+							}, 3000);
+						}
+					}
+				});
+			});
+		});
+	</script>
+
+	<script>
+		// 判断身份证格式是否正确
+		$('#id-card').blur(function() {
+			var idcard = $('#id-card').val();
+			var Rega = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+			if(!Rega.test(idcard)) {
+				layer.msg('请输入正确的身份证格式！');
+				return false;
+			}
+		});
+	</script>
+
+</html>
