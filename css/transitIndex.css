@@ -212,3 +212,13 @@
     border-bottom: 1px solid #636161;
     margin-top: 20px;
 }
+.timeTrue {
+    position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #489CF5;
+}
+.timeTrue:hover {
+    color: #489CF5;
+}
