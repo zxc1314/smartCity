@@ -41,34 +41,34 @@
 							<a class="layui-form-mid ">读卡</a>
 						</div>
 					</div>
-					<button class="layui-btn activeBtn" lay-submit="" lay-filter="demo1" >激活</button>
+					<button class="layui-btn activeBtn" lay-submit="" lay-filter="demo1">激活</button>
 				</form>
 			</div>
 			<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
 			<script type="text/javascript" src="../../layui/layui.js"></script>
 			<script>
 				layui.use('form', function() {
-					var form = layui.form;
+							var form = layui.form;
 
-					//监听提交
-					form.on('submit(demo1)', function(data) {
-						$.ajax({
-							url: '',
-							type: 'post',
-							data: {
-								data: data.field
-							},
-							dataType: 'json',
-							success: function(data) {
-								console.log(data);
-								if(data){
-                		window.location.href="activeSuccess.html";  
-                	}
-
-							}
-						});
-					});
-				});
+							//监听提交
+							form.on('submit(demo1)', function(data) {
+								$.ajax({
+									url: '',
+									type: 'post',
+									data: {
+										data: data.field
+									},
+									dataType: 'json',
+									success: function(data) {
+										console.log(data);
+										if(data) {
+											setTimeout(function() {
+												window.location.href = "activeSuccess.html";
+											}, 3000);
+										}
+									}
+								});
+							});
 			</script>
 	</body>
 
