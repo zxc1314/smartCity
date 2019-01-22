@@ -6,17 +6,17 @@
                 '.sel-boxs{display:none;}'+
                 '.sel-boxs .bg{position:fixed;left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:998;}'+
                 '.sel-box{position:fixed;bottom:0;left:0;right:0;z-index:999;}'+
-                '.sel-box .btn{background:#fda626;overflow:hidden;}'+
+                '.sel-box .btn{background:#429BF1;overflow:hidden;}'+
                 '.sel-box .btn1{overflow:hidden;width:22px;height:22px;float:left;padding:11px 12px;}'+
                 '.sel-box .btn1 img{float:left;width:100%;height:100%;}'+
                 '.sel-box .ok{float:right;}'+
                 '.sel-box .name{color:white;text-align:center;line-height:22px;font-size:18px;padding:11px 0;}'+
                 '.sel-con{background:white;}'+
-                '.sel-con .border{height:34px;border:solid 1px #fda626;border-width:1px 0;position:fixed;bottom:72px;left:0;right:0;pointer-events:none;}'+
+                '.sel-con .border{height:34px;border:solid 1px #429BF1;border-width:1px 0;position:fixed;bottom:72px;left:0;right:0;pointer-events:none;}'+
                 '.sel-con .table{display:table;width:100%;table-layout:fixed;}'+
                 '.sel-con .cell{display:table-cell;vertical-align:middle;text-align:center;overflow:hidden;}'+
                 '.sel-con .scroll{-webkit-overflow-scrolling:touch;height:180px;overflow:auto;box-sizing:border-box;padding:72px 0;width:200%;padding-right:100%;}'+
-                '.sel-con .ele{font-size:16px;color:#b2b2b2;height:36px;line-height:36px;}'+
+                '.sel-con .ele{font-size:16px;color:#7b7878;height:36px;line-height:36px;}'+
                 '@-webkit-keyframes fadeInUp {from {opacity: 0;-webkit-transform: translate3d(0, 100%, 0);transform: translate3d(0, 100%, 0);}to {opacity: 1;-webkit-transform: none;transform: none;}}'+
                 '@keyframes fadeInUp {from {opacity: 0;-webkit-transform: translate3d(0, 100%, 0);transform: translate3d(0, 100%, 0);} to {opacity: 1;-webkit-transform: none;transform: none;}}'+
                 '.fadeInUp {-webkit-animation-name: fadeInUp;animation-name: fadeInUp;}'+

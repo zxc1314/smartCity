@@ -222,3 +222,31 @@
 .timeTrue:hover {
     color: #489CF5;
 }
+
+.seachTimeBtn .layui-btn-primary {
+    padding: 0;
+    border: none;
+}
+.seachTimeBtn .month {
+    border: 1px solid #C9C9C9;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    margin-top: 3px;
+    border-radius: 15px;
+}
+.seachTimeBtn .zhuanhuan {
+    width: 14px;
+    margin: 0 3px 2px;
+}
+.timeBox input.seachTime,.timeBox input.seachTimeEnd {
+    border: none;
+    color: #429BF1;
+    text-align: center;
+    border-bottom: 1px solid #429BF1;
+}
+.timeBox .zhi {
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+}
