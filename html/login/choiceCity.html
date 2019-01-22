@@ -18,32 +18,40 @@
 
 	<body>
 		<div class="layui-fluid ">
-			<div class="layui-row title">
-				<a href="###" class="back"><i class="layui-icon">&#xe603;</i>&nbsp;&nbsp;返回</a>
-				<span class="file-title">标题</span>
-				<a href="" class="next" onclick="next()">下一步</a>
+			<div class="layui-row listContent">
+				<h2 class="listTitle">
+                    <a href="javascript:history.back(-1)" class="back">
+                        <i class="layui-icon layui-icon-left"></i> 返回
+                    </a>
+                    选择常用地
+                    <a class="nextHtml">下一步</a>
+               </h2>
+
 			</div>
-			<hr />
-			<p>选择常用地
-				<i class="layui-icon right">&#xe602;</i>
-				<input type="text" class="pick" id="picker" placeholder="--点击选择--">
-			</p>
+			<div class="layui-row contentBox">
+				<p>选择常用地
+					<i class="layui-icon right">&#xe602;</i>
+					<input type="text" class="pick" id="picker" placeholder="--点击选择--">
+				</p>
+			</div>
 		</div>
 		<script src="../../js/picker.min.js"></script>
 		<script type="text/javascript" src="../../js/city.js"></script>
 		<script type="text/javascript" src="../../js/chance.js"></script>
 		<script type="text/javascript">
-			function next(){
+			function next() {
 				var picker = $("#picker").val();
 				$.ajax({
-					type:"POST",
-					dataType:"json",
-					url:"",
-					data:{"picker":picker},
-					success:function(data){
-						if(data.status == "0"){
-							window.location.href="AccontLogin.html";
-						}else{
+					type: "POST",
+					dataType: "json",
+					url: "",
+					data: {
+						"picker": picker
+					},
+					success: function(data) {
+						if(data.status == "0") {
+							window.location.href = "AccontLogin.html";
+						} else {
 							alert("选择有误")
 						}
 					}
