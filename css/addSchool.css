@@ -45,3 +45,7 @@
 	margin-top: 2.5rem;
 	background-color: rgb(72, 156, 245, 1);
 }
+.link{
+	float: right;
+	vertical-align: middle;
+}

@@ -48,7 +48,9 @@
 
 
 /*激活成功的页面*/
-
+.listContent{
+	line-height: 3rem;
+}
 .success {
 	margin-top: 7rem;
 	text-align: center;
