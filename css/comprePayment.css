@@ -28,9 +28,10 @@ body{
     margin: 0 -15px;
 }
 .layui-inline{
-	margin: 0 -15px;
+	margin: 0 0px;
     margin-top: 1rem;
     background-color: white;
+    width: 100%;
 }
 .layui-inline img{
 	height: 2.5rem;
