@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="../../layui/css/layui.css">
 		<link rel="stylesheet" href="../../css/base.css">
-		<link rel="stylesheet" href="../../css/noReceive.css" />
+		<link rel="stylesheet" href="../../css/orderDetails.css" />
 		<title>交易明细详情</title>
 	</head>
 
@@ -17,7 +17,7 @@
                     <a href="javascript:history.back(-1)" class="back">
                         <i class="layui-icon layui-icon-left"></i> 返回
                     </a>
-                    交易明细
+                    订单详情
                 </h2>
 				<!--未领款内容-->
 				<div class="layui-row contentBox" id="content">
@@ -31,40 +31,48 @@
 			{{# layui.each(d.appList, function(index, item){ }}
 			<form class="layui-form" action="">
 				<div class="layui-col-xs10 layui-col-xs-offset1 dealContent">
-					<p class="dealing">充值</p>
-					<p class="receiveMoney">{{ item.receiveMoney }}</p>
+					<p class="dealing">支付成功</p>
+					<p class="receiveMoney">{{ item.payMoney }}</p>
 				</div>
 				<div class="layui-col-xs10 layui-col-xs-offset1 cardContent">
 					<div class="layui-row">
-						<div class="layui-col-xs6">
-							<div class="payType">充值方式</div>
+						<div class="layui-col-xs3">
+							<div class="payType">付款方式</div>
 						</div>
-						<div class="layui-col-xs6">
-							<span class="type">{{ item.receiveType }}</span>
+						<div class="layui-col-xs9">
+							<span class="type">{{ item.payMethod }}</span>
+						</div>
+					</div>
+					<div class="layui-row dashed">
+						<div class="layui-col-xs3">
+							<div class="payType">交易描述</div>
+						</div>
+						<div class="layui-col-xs9">
+							<span class="type">{{ item.payDescribe }}</span>
 						</div>
 					</div>
 					<div class="layui-row">
-						<div class="layui-col-xs6">
-							<div class="payType">城市云卡卡号</div>
+						<div class="layui-col-xs3">
+							<div class="payType">员工卡号</div>
 						</div>
-						<div class="layui-col-xs6">
-							<span class="type">{{ item.receiveNum }}</span>
+						<div class="layui-col-xs9">
+							<span class="type">{{ item.cardNum}}</span>
 						</div>
 					</div>
 					<div class="layui-row">
-						<div class="layui-col-xs6">
+						<div class="layui-col-xs3">
+							<div class="payType">订单编号</div>
+						</div>
+						<div class="layui-col-xs9">
+							<span class="type">{{ item.payNum }}</span>
+						</div>
+					</div>
+					<div class="layui-row">
+						<div class="layui-col-xs3">
 							<div class="payType">创建时间</div>
 						</div>
-						<div class="layui-col-xs6">
-							<span class="type">{{ item.receiveTime }}</span>
-						</div>
-					</div>
-					<div class="layui-row">
-						<div class="layui-col-xs6">
-							<div class="payType">备注</div>
-						</div>
-						<div class="layui-col-xs6">
-							<span class="type">{{ item.receiveLine }}</span>
+						<div class="layui-col-xs9">
+							<span class="type">{{ item.payTime }}</span>
 						</div>
 					</div>
 				</div>
@@ -80,11 +88,12 @@
 				var receiveData = { //数据
 					"title": "应用模板引擎",
 					"appList": [{
-						"receiveMoney": "+100",
-						"receiveType": "农信E支付",
-						"receiveNum": "201401014102",
-						"receiveTime": "2018-02-03",
-						"receiveLine": "198路"
+						"payMoney": "￥100.00",
+						"payMethod": "广西农村信用社信用卡(9282)",
+						"payDescribe": "XXX交易交通",
+						"cardNum": "10239398",
+						"payNum": "20292912",
+						"payTime":"2018-03-03 12:30:02"
 					}]
 				}
 				// $.ajax({
@@ -100,30 +109,6 @@
 					appView = document.getElementById('content');
 				laytpl(getAppTpl).render(receiveData, function(html) {
 					appView.innerHTML = html;
-				});
-
-				//监听提交
-				form.on('submit(demo1)', function(data) {
-					$.ajax({
-						url: '',
-						type: 'post',
-						data: {
-							data: data.field
-						},
-						dataType: 'json',
-						success: function(data) {
-							console.log(data);
-							if(data) {
-								setTimeout(function() {
-									window.location.href = "receiveSuccess.html";
-								}, 3000);
-							}
-						}
-						//当请求接口出现错误的时候执行error
-						/*	error:function(XMLHttpRequest){
-								window.location.href = "receiveError.html";
-							}*/
-					});
 				});
 			});
 		</script>
