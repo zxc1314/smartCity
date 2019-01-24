@@ -45,7 +45,7 @@
                                     本月
                                 </div>
                                 <div class="layui-col-xs2 layui-col-xs-offset8">
-                                     <i class="layui-icon layui-icon-date"></i>
+                                     <i class="layui-icon layui-icon-date seachTime" index='0'></i>
                                 </div>
                                 <div class="layui-col-xs12 seachHelp">
                                     说明: 由于网络原因,数据可能会有延迟
@@ -72,7 +72,7 @@
                                     本月
                                 </div>
                                 <div class="layui-col-xs2 layui-col-xs-offset8">
-                                     <i class="layui-icon layui-icon-date"></i>
+                                     <i class="layui-icon layui-icon-date seachTime" index='1'></i>
                                 </div>
                                 <div class="layui-col-xs12 seachHelp">
                                     说明: 由于网络原因,数据可能会有延迟
@@ -88,7 +88,7 @@
                                     本月
                                 </div>
                                 <div class="layui-col-xs2 layui-col-xs-offset8">
-                                     <i class="layui-icon layui-icon-date"></i>
+                                     <i class="layui-icon layui-icon-date seachTime" index='2'></i>
                                 </div>
                                 <div class="layui-col-xs12 seachHelp">
                                     说明: 由于网络原因,数据可能会有延迟
@@ -104,6 +104,9 @@
             <!-- 交易明细end -->
             
         </div>
+        <!-- 隐藏域 -->
+        <input type="hidden" id="hiddenData" value="">
+        <input type="hidden" id="hiddenData2" value="">
     </body>
     <script src="../../js/jquery-3.3.1.min.js"></script>
     <script src="../../layui/layui.js"></script>
@@ -156,32 +159,56 @@
             });*/
             //假数据,所有记录
             var data = {code:0,success:'true',msg:'请求成功',value:[{type:0,detailsType:'银联充值',detailsTime:'2019-01-10 13:11:23',detailsNum:'20134565921321156521',detailsMoney:'+100',detailsStatus:'待领取'},{type:1,detailsType:'银联充值',detailsTime:'2019-01-10 13:11:23',detailsNum:'20134565921321156521',detailsMoney:'+100',detailsStatus:'已领款'},{type:0,detailsType:'银联充值',detailsTime:'2019-01-10 13:11:23',detailsNum:'20134565921321156521',detailsMoney:'+100',detailsStatus:''},{type:1,detailsType:'银联充值',detailsTime:'2019-01-10 13:11:23',detailsNum:'20134565921321156521',detailsMoney:'+100',detailsStatus:'待领取'},{type:0,detailsType:'银联充值',detailsTime:'2019-01-10 13:11:23',detailsNum:'20134565921321156521',detailsMoney:'+100',detailsStatus:'待领取'},{type:1,detailsType:'银联充值',detailsTime:'2019-01-10 13:11:23',detailsNum:'20134565921321156521',detailsMoney:'+100',detailsStatus:'待领取'},{type:1,detailsType:'银联充值',detailsTime:'2019-01-10 13:11:23',detailsNum:'20134565921321156521',detailsMoney:'+100',detailsStatus:'待领取'}]};
-            var seachContentHtml = $("#seachContent").html();
-            laytpl(seachContentHtml).render(data,function(html) {
-                $(".allDetail").find(".seachContent").html(html);
-            });
-            //区分充值记录与消费记录并重新渲染
-            var newData1 = {},newData2 = {},newArr1 = [],newArr2 = [];
-                newData1.value = newArr1;
-                newData2.value = newArr2;
-            for (var i = 0; i < data.value.length; i++) {
-                if (data.value[i].type == 0) {
-                    newArr1.push(data.value[i]);
+            function elementInit(data){
+                var seachContentHtml = $("#seachContent").html();
+                laytpl(seachContentHtml).render(data,function(html) {
+                    $(".allDetail").find(".seachContent").html(html);
+                });
+                //区分充值记录与消费记录并重新渲染
+                var newData1 = {},newData2 = {},newArr1 = [],newArr2 = [];
+                    newData1.value = newArr1;
+                    newData2.value = newArr2;
+                for (var i = 0; i < data.value.length; i++) {
+                    if (data.value[i].type == 0) {
+                        newArr1.push(data.value[i]);
 
-                } else {
-                    newArr2.push(data.value[i]);
+                    } else {
+                        newArr2.push(data.value[i]);
+                    }
                 }
+                //渲染充值记录
+                laytpl(seachContentHtml).render(newData1,function(html) {
+                    $(".rechargeDetail").find(".seachContent").html(html);
+                });
+                //渲染消费记录
+                laytpl(seachContentHtml).render(newData2,function(html) {
+                    $(".consumeDetail").find(".seachContent").html(html);
+                });
             }
-            //渲染充值记录
-            laytpl(seachContentHtml).render(newData1,function(html) {
-                $(".rechargeDetail").find(".seachContent").html(html);
+            elementInit(data);
+            var res='';
+            $(".seachTime").each(function(){
+                var $this = $(this);
+                var thisIndex = $this.attr("index");
+                $this.on("click",function(){
+                    layer.open({
+                        type: 2,
+                        closeBtn: 0,
+                        title: false,
+                        content: 'seachTimeDetailsMonth.html?thisIndex=' + thisIndex,
+                        area: ['100%', '100%'],
+                        yes: function(index) {
+                            layer.close(index);
+                        },
+                        end: function() {
+                            console.log($("#hiddenData").val());
+                            console.log($("#hiddenData2").val());
+                            elementInit(JSON.parse($("#hiddenData2").val()));
+                        }
+                    });
+                });
+                
             });
-            //渲染消费记录
-            laytpl(seachContentHtml).render(newData2,function(html) {
-                $(".consumeDetail").find(".seachContent").html(html);
-            });
-
-            
         });
     </script>
 
