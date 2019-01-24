@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>NFC领款</title>
+		<title>交易明细详情</title>
 		<link rel="stylesheet" href="../../layui/css/layui.css">
 		<link rel="stylesheet" href="../../css/base.css">
 		<link rel="stylesheet" href="../../css/noReceive.css" />
@@ -17,7 +17,7 @@
                     <a href="javascript:history.back(-1)" class="back">
                         <i class="layui-icon layui-icon-left"></i> 返回
                     </a>
-                    领款
+                    交易明细
                 </h2>
 				<!--未领款内容-->
 				<div class="layui-row contentBox" id="content">
@@ -31,13 +31,13 @@
 			{{# layui.each(d.appList, function(index, item){ }}
 			<form class="layui-form" action="">
 				<div class="layui-col-xs10 layui-col-xs-offset1 dealContent">
-					<p class="dealing">处理中</p>
+					<p class="dealing">充值</p>
 					<p class="receiveMoney">{{ item.receiveMoney }}</p>
 				</div>
 				<div class="layui-col-xs10 layui-col-xs-offset1 cardContent">
 					<div class="layui-row">
 						<div class="layui-col-xs6">
-							<div class="payType">付款方式</div>
+							<div class="payType">充值方式</div>
 						</div>
 						<div class="layui-col-xs6">
 							<span class="type">{{ item.receiveType }}</span>
@@ -45,7 +45,7 @@
 					</div>
 					<div class="layui-row">
 						<div class="layui-col-xs6">
-							<div class="payType">卡号</div>
+							<div class="payType">城市云卡卡号</div>
 						</div>
 						<div class="layui-col-xs6">
 							<span class="type">{{ item.receiveNum }}</span>
@@ -61,14 +61,12 @@
 					</div>
 					<div class="layui-row">
 						<div class="layui-col-xs6">
-							<div class="payType">线路</div>
+							<div class="payType">备注</div>
 						</div>
 						<div class="layui-col-xs6">
 							<span class="type">{{ item.receiveLine }}</span>
 						</div>
 					</div>
-					<button class="layui-btn layui-btn-normal receiveBtn" lay-submit="" lay-filter="demo1">NFC领款</button>
-					<p class="warn">温馨提示：请先贴卡，再点击NFC领</p>
 				</div>
 			</form>
 			<!--无数据时-->

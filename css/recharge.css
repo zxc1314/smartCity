@@ -316,3 +316,19 @@
 	margin-right: -10px;
 	font-size: 1rem;
 }
+/*服务范围页面*/
+.goBack{
+	    position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(153,153,153,0);
+    color: #489CF5;;
+}
+.rangeTitle{
+	  font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
