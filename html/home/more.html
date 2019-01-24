@@ -15,9 +15,8 @@
 		<div class="layui-fluid">
 			<div>
 				<a href="javascript:history.back(-1);" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
-				<span href="" class="edit" >编辑</span>
-				<a href="" class="end" >完成</a>
-				
+				<span href="" class="edit">编辑</span>
+				<a href="" class="end">完成</a>
 			</div>
 			<!--上部分内容-->
 			<div class="layui-row appContent" id="topContent">
@@ -36,57 +35,53 @@
 		<script id="appContent" type="text/html">
 			{{# layui.each(d.appList, function(index, item){ }}
 			<div class="layui-col-xs3">
-					<a href="javascript:;">
-						<img src="{{ item.reduceImg }}" class="reduce" id="reduce"  />
-						<div class="img-txt">
-							<img src="{{ item.cardImg }}" alt="">
-							<h3>{{ item.applyName }}</h3>
-						</div>
-					</a>
-				</div>
+				<img src="{{ item.reduceImg }}" class="reduce" id="reduce" />
+				<a href="javascript:;">
+					<div class="img-txt">
+						<img src="{{ item.cardImg }}" alt="">
+						<h3>{{ item.applyName }}</h3>
+					</div>
+				</a>
+			</div>
 			<!--无数据时-->
-			{{# }); }} {{# if(d.appList.length === 0){ }}
-			
-			{{# } }}
+			{{# }); }} {{# if(d.appList.length === 0){ }} {{# } }}
 		</script>
 		<!--2、下部分内容-->
 		<script id="footApp" type="text/html">
 			{{# layui.each(d.lastestNewsList, function(index, item){ }}
-				<div class="layui-col-xs3">
-					<img src="{{ item.addImg }}" class="addAplay" id="addAplay"  />
-					<a href="javascript:;">
-						<div class="img-txt">
-							<img src="{{ item.cardImg }}" alt="">
-							<h3>{{ item.applyName }}</h3>
-						</div>
-					</a>
-				</div>
+			<div class="layui-col-xs3">
+				<img src="{{ item.addImg }}" class="addAplay" id="addAplay" />
+				<a href="javascript:;">
+					<div class="img-txt">
+						<img src="{{ item.cardImg }}" alt="">
+						<h3>{{ item.applyName }}</h3>
+					</div>
+				</a>
+			</div>
 			<!--无数据时-->
-			{{# }); }} {{# if(d.lastestNewsList.length === 0){ }}
-			
-			{{# } }}
+			{{# }); }} {{# if(d.lastestNewsList.length === 0){ }} {{# } }}
 		</script>
 		<script>
-			layui.use(['laytpl','layer'], function() {
+			layui.use(['laytpl', 'layer'], function() {
 				var laytpl = layui.laytpl;
-				    layer = layui.layer;
+				layer = layui.layer;
 				var appData = { //数据
 					"title": "应用模板引擎",
 					"appList": [{
 							"reduceImg": "../../img/reduce.png",
-							"cardImg":"../../img/tu.png",
-							"applyName":"整形医院"
-							
+							"cardImg": "../../img/tu.png",
+							"applyName": "整形医院"
+
 						},
 						{
 							"reduceImg": "../../img/reduce.png",
-							"cardImg":"../../img/tu.png",
-							"applyName":"外国语"
+							"cardImg": "../../img/tu.png",
+							"applyName": "外国语"
 						},
 						{
 							"reduceImg": "../../img/reduce.png",
-							"cardImg":"../../img/tu.png",
-							"applyName":"学校"
+							"cardImg": "../../img/tu.png",
+							"applyName": "学校"
 						}
 					]
 				}
@@ -105,50 +100,57 @@
 					appView.innerHTML = html;
 				});
 				var lastestNewsData = {
-				"lastestNewsList" : [
-					{
-						"addImg": "../../img/add.png",
-						"cardImg":"../../img/tu.png",
-						"applyName":"医院"
-					},
-					{
-						"addImg": "../../img/add.png",
-						"cardImg":"../../img/tu.png",
-						"applyName":"快捷"
-					},
-				],
-			}
-			// $.ajax({
-			// 	url: '/getAppData',
-			// 	type: 'post',
-			// 	data: {
-			// 	},
-			// 	dataType: 'json',
-			// 	success: function (data) {
-					var getlastNewsTpl = footApp.innerHTML,
-							smartCityNoticeView = document.getElementById('footContent');
-					laytpl(getlastNewsTpl).render(lastestNewsData, function(html){
-					  smartCityNoticeView.innerHTML = html;
+					"lastestNewsList": [{
+							"addImg": "../../img/add.png",
+							"cardImg": "../../img/tu.png",
+							"applyName": "医院"
+						},
+						{
+							"addImg": "../../img/add.png",
+							"cardImg": "../../img/tu.png",
+							"applyName": "快捷"
+						},
+					],
+				}
+				// $.ajax({
+				// 	url: '/getAppData',
+				// 	type: 'post',
+				// 	data: {
+				// 	},
+				// 	dataType: 'json',
+				// 	success: function (data) {
+				var getlastNewsTpl = footApp.innerHTML,
+					smartCityNoticeView = document.getElementById('footContent');
+				laytpl(getlastNewsTpl).render(lastestNewsData, function(html) {
+					smartCityNoticeView.innerHTML = html;
+				});
+				// 	}
+				function domove(thisobj) {
+					if(thisobj.hasClass("reduce")) {
+						thisobj.attr("src", "../../img/add.png");
+						thisobj.attr("class", "addAplay");
+						$("#footContent").append(thisobj.parent('.layui-col-xs3'));
+					} else if(thisobj.hasClass("addAplay")) {
+						thisobj.attr("src", "../../img/reduce.png");
+						thisobj.attr("class", "reduce");
+						$("#topContent").append(thisobj.parent('.layui-col-xs3'));
+					}
+				}
+
+				// });
+				$(".edit").on('click', function() {
+					$(".edit").css("display", "none");
+					$(".end").css("display", "block");
+					$(".reduce").css("display", "block");
+					$(".addAplay").css("display", "block")
+					$(".reduce").on('click', function() {
+						domove($(this));
 					});
-			// 	}
-			// });
-			$(".edit").on('click', function() {
-				 $(".edit").css("display","none");
-				 $(".end").css("display","block");
-				 $(".reduce").css("display","block");
-				 $(".addAplay").css("display","block")
-			   $(".reduce").on('click', function() {
-				 $(this).attr("src","../../img/add.png");
-				 $(this).attr("class","addAplay");
-				 $("#footContent").append($(this).parent().parent('.layui-col-xs3'));
-			   });
-			    $(".addAplay").on('click', function() {
-				 $(this).attr("src","../../img/reduce.png");
-			/*	 $(this).attr("class","reduce");*/
-				 $("#topContent").append($(this).parent('.layui-col-xs3'));
-			   });
+					$(".addAplay").on('click', function() {
+						domove($(this));
+					})
+				});
 			});
-		}); 
 		</script>
 	</body>
 

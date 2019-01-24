@@ -48,10 +48,16 @@
 
 
 /*激活成功的页面*/
-
+.listContent{
+	line-height: 3rem;
+}
 .success {
 	margin-top: 7rem;
 	text-align: center;
+}
+.success img{
+	height: 55px;
+	height: 55px;
 }
 .activeMsg{
 	margin-top:1rem;

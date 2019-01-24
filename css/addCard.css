@@ -14,3 +14,6 @@
 .explain{
 	margin: 3rem 0rem 0rem .6rem;
 }
+.layui-input, .layui-textarea{
+	border-bottom: 1px solid  gainsboro;
+}

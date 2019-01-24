@@ -14,13 +14,13 @@
 
 	<body>
 		<div class="layui-fluid">
-			<div>
+			<div class="layui-row bagContent">
 				<a href="javascript:history.back(-1);" class="back"><i class="layui-icon layui-icon-left"></i>返回</a>
 				<h2 class="file-title">卡包</h2>
 				<a href="addCard.html" class="add"><i class="layui-icon">&#xe654;</i></a>
-			</div>
 			<!--卡包信息-->
 			<div class="layui-row transitCardBox " id="viewContent">
+			</div>
 			</div>
 			<!--点击“解绑”出现的弹窗内容-->
 			<div class="opendiv" id="opendiv" data-method="offset" data-type="c">
@@ -59,13 +59,13 @@
 						{
 							"cardImg": "../../img/sy_gjc.png",
 							"cardName": "广西农信信用社",
-							"cardWeihao": "2013 1811 132",
+							"cardWeihao": "2012 1561 132",
 							"cardType": "储蓄卡"
 						},
 						{
 							"cardImg": "../../img/sy_gjc.png",
 							"cardName": "广西农信信用社",
-							"cardWeihao": "2013 1811 132",
+							"cardWeihao": "2015 1561 132",
 							"cardType": "信用卡"
 						}
 					]
@@ -84,7 +84,7 @@
 				laytpl(getAppTpl).render(appData, function(html) {
 					appView.innerHTML = html;
 				});
-				<!--弹窗-->
+				//弹窗
 			$(".transitCard").on('click', function() {
 				layer.confirm('', {
 					title: false,
