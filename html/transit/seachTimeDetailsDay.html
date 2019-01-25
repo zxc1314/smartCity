@@ -120,22 +120,7 @@
 
                 var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
                 console.log(index);
-                parent.layer.close(index); //再执行关闭
-                parent.layer.open({
-                        type: 2,
-                        closeBtn: 0,
-                        title: false,
-                        content: 'seachTimeDetailsMonth.html?thisIndex='+getUrlParam('thisIndex'),
-                        area: ['100%', '100%'],
-                        yes: function(index) {
-                            layer.close(index);
-                        },
-                        end: function() {
-                            console.log($("#hiddenData").val());
-                            console.log($("#hiddenData2").val());
-                            parent.elementInit(JSON.parse($("#hiddenData2").val()));
-                        }
-                    });
+                parent.layer.iframeSrc(index,'seachTimeDetailsMonth.html?thisIndex='+getUrlParam('thisIndex'))
             })
             //获取当前年份与时间段区间
             var date=new Date;
