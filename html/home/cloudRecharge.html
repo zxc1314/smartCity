@@ -39,7 +39,7 @@
 						<a href="readCard.html">
 							<img class="layui-form-mid" src="../../img/cardLogo.png" />
 						</a>
-						<label class="layui-form-label">贴卡读卡</label>
+						<label class="layui-form-label" id="cardnum">贴卡读卡</label>
 					</div>
 				</form>
 			</div>
@@ -126,30 +126,6 @@
 							</div>
 						</a>
 					</div>
-					<!--<div class="layui-col-xs4">
-						<a href="javascript:;" id="alipay">
-							<div class="img-txt">
-								<img src="../../img/yinlian.png" alt="">
-								<p>银联</p>
-							</div>
-						</a>
-					</div>-->
-					<!-- <div class="layui-col-xs3">
-                    <a href="javascript:;" id="weixinPay">
-                    <div class="img-txt">
-                    <img src="../../img/weixin.png" alt="">
-                    <p>微信</p>
-                    </div>
-                    </a>
-                    </div>
-                    <div class="layui-col-xs3">
-                    <a href="javascript:;" id="unionPay">
-                    <div class="img-txt">
-                    <img src="../../img/weixin.png" alt="">
-                    <p>云闪付</p>
-                    </div>
-                    </a>
-                    </div> -->
 				</div>
 			</div>
 			<!-- end-支付方式 -->
@@ -190,7 +166,7 @@
 								}
 							})
 						});
-					// 下拉框调用接口 暂未完成
+					// 下拉框调用接口
 					function ajaxGetDropDown(url, dataBox, data) {
 						$.ajax({
 							url: url,
@@ -263,6 +239,25 @@
 						}
 					});
 				});
+		</script>
+		<script type="text/javascript">
+            var cardnum=getUrlParam('cardnum');
+
+            function getUrlParam(key) {
+                // 获取参数
+                var url = window.location.search;
+                // 正则筛选地址栏
+                var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+                // 匹配目标参数
+                var result = url.substr(1).match(reg);
+                //返回参数值
+                return result ? decodeURIComponent(result[2]) : null;
+            }
+            if (cardnum){
+                $("#cardnum").text(getUrlParam('cardnum'));
+            } else{
+                alert('读取卡号失败或卡号为空');
+            }
 		</script>
 	</body>
 

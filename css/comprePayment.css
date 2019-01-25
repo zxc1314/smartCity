@@ -50,8 +50,8 @@ body{
 	color: gray;
 }
 .warn::before{
-	content: "——————";
+	content: "———— ";
 }
 .warn::after{
-	content: "——————";
+	content: " ————";
 }
