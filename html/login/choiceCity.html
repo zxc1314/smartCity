@@ -21,32 +21,57 @@
 			<div class="layui-row listContent">
 				<h2 class="listTitle">
                     <a href="javascript:history.back(-1)" class="back">
-                        <i class="layui-icon layui-icon-left"></i> 返回
+                        <i class="layui-icon layui-icon-left"></i>
+                        返回
                     </a>
                     选择常用地
-                    <a class="nextHtml">下一步</a>
+                    <a href="nextHtml" class="next">下一步 </a>
                </h2>
-
 			</div>
-			<div class="layui-row contentBox">
-				<p>选择常用地
-					<i class="layui-icon right">&#xe602;</i>
-					<input type="text" class="pick" id="picker" placeholder="--点击选择--">
-				</p>
+			<!--常用地选择-->
+			<div class="layui-field-box">
+				<form class="layui-form " action="javascript:;">
+					<div class="layui-form-item">
+						<label class="layui-form-label picker">选择常用地：</label>
+						<div class="layui-input-inline">
+							<select id="selectPro" name="P1" lay-filter="province">
+								<option></option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select id="selectCity" name="C1" lay-filter="city">
+								<option></option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select id="selectArea" name="A1" lay-filter="area">
+								<option></option>
+							</select>
+						</div>
+					</div>
+				</form>
 			</div>
 		</div>
-		<script src="../../js/picker.min.js"></script>
-		<script type="text/javascript" src="../../js/city.js"></script>
-		<script type="text/javascript" src="../../js/chance.js"></script>
+
+		<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="../../layui/lay/modules/layui.all.js"></script>
+		<script type="text/javascript" src="../../js/citys.js"></script>
+		<script type="text/javascript">
+			pca.init('select[name=P1]', 'select[name=C1]', 'select[name=A1]');
+		</script>
 		<script type="text/javascript">
 			function next() {
-				var picker = $("#picker").val();
+				var Pro = $('#selectPro option:selected').val(); //省选中的值
+				var City = $('#selectCity option:selected').val(); //市选中的值
+				var Area = $('#selectArea option:selected').val(); //区选中的值
 				$.ajax({
 					type: "POST",
 					dataType: "json",
 					url: "",
 					data: {
-						"picker": picker
+						"Pro": Pro,
+						"City": City,
+						"Area": Area
 					},
 					success: function(data) {
 						if(data.status == "0") {
