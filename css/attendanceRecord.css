@@ -35,7 +35,7 @@
 .recordBox .recordTime{
 	padding: 1rem 0rem;
 	font-size: 1rem;
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid gainsboro;
 }
 .recordBox .recordAddress{
 	color: gray;
