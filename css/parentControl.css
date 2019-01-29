@@ -6,7 +6,6 @@ html{
 }
 .top{
 	background-color: white;
-	height: 3rem;
 }
 .msg{
 	/*text-indent:2rem;*/
@@ -41,10 +40,24 @@ hr{
 	color: rgb(72, 156, 245,1);
 	position: absolute;
 	right: 1rem;
-	top: 0px;
-	line-height: 2.3rem;
+	line-height: 3rem;
 	font-size: 1rem;
 }
 .layui-form-switch{
 	float: right;
+}
+.goBack{
+	position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(153,153,153,0);
+    color: #489CF5;
+}
+.manageTitle{
+	font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
 }

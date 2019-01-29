@@ -62,3 +62,7 @@
     left: 3.2rem;
     display: none;
 }
+.titleContent{
+	margin-top: .5rem;
+	padding: 0 -15px;
+}

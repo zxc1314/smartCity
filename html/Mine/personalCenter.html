@@ -45,9 +45,8 @@
 		<!--引用模板引擎-->
 		<script id="recordContent" type="text/html">
 			{{# layui.each(d.appList, function(index, item){ }}
-			<!--<p class="recordTime">{{ item.recordTime }}<span class="recordAddress">{{ item.recordAddress }}</span></p>-->
 			<p class="recordList">头像
-				<a href=""><img src="{{ item.headImg }}"><i class="layui-icon list">&#xe602;</i></a>
+				<a href="defaultHead.html"><img src="{{ item.headImg }}"><i class="layui-icon list">&#xe602;</i></a>
 			</p>
 			<p class="recordList">名字<span class=" list personName">{{ item.personName }}</span></p>
 			<p class="recordList">手机号
