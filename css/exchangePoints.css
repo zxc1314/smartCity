@@ -94,3 +94,42 @@
 .layui-badge-dot{
 	margin: 0 10px
 }
+.check_point{
+	float: right;
+	background-color: rgba(0, 95, 166);
+	height: 30px;
+	line-height: 30px;
+}
+/*弹窗样式*/
+.code_input{
+	line-height: 2rem;
+	border: none;
+	margin: 0 0 0 20px;
+}
+.pwd_input{
+	border: none;
+	margin: 0 0 0 20px;
+}
+/*成功失败页面*/
+.success {
+	margin-top: 2rem;
+	text-align: center;
+}
+.success img{
+	height: 55px;
+	height: 55px;
+}
+.activeMsg{
+	margin-top:1rem;
+}
+.successMsg{
+	margin-top: 2rem;
+}
+.successMsg span{
+	color: rgba(0, 95, 166);
+}
+.close_btn{
+	margin-top: 2rem;
+	width: 50%;
+	background-color:rgba(0, 95, 166) ;
+}
