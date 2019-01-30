@@ -19,7 +19,7 @@
 }
 .layui-form-item .layui-form-label{
 	overflow: visible;
-	font-size: 17px;
+	font-size: 14px;
 }
 .headContent{
 	margin-top: 1rem;
@@ -63,4 +63,34 @@
 }
 .footer p{
 	line-height: 1.6rem;
+}
+/*兑换ing页面*/
+.exchanging_form{
+	margin-top: 1rem;
+}
+.exchanging_form label{
+	padding: 9px 5px;
+}
+.right_input{
+	text-align: right;
+	width: 49%;
+	border: none;
+	font-size: 14px;
+	float: right;
+}
+.left_lable{
+	text-align: left;
+}
+.msgRow{
+	border-bottom: 1px solid gainsboro;
+}
+.msgRow span{
+	font-size: 12px;
+}
+.next_step{
+	width: 50%;
+	background-color: rgba(0, 95, 166);
+}
+.layui-badge-dot{
+	margin: 0 10px
 }
