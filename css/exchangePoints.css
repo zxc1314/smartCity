@@ -1,0 +1,138 @@
+/*兑换积分-一键查询*/
+.back{
+	position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: rgba(72, 156, 245, 1);
+    background-color: rgba(153,153,153,0);
+}
+.exchangeTitle{
+	font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+.query_btn{
+	float: right;
+	background-color:rgba(0, 95, 166) ;
+}
+.layui-form-item .layui-form-label{
+	overflow: visible;
+	font-size: 14px;
+}
+.headContent{
+	margin-top: 1rem;
+	border-bottom: 1px solid gainsboro;
+}
+.layui-inline img{
+	height: 30px;
+	width: 30px;
+	margin: 0 10px;
+}
+.contentPart{
+	margin-top: 1rem;
+}
+.radio{
+	float: right;
+}
+.layui-anim.layui-icon{
+	float: right;
+	margin: 0 10px
+}
+.layui-form-radio>i:hover, .layui-form-radioed>i{
+	color:rgba(0, 95, 166) ;
+}
+.cardMsg{
+	border-bottom: 1px solid gainsboro;
+}
+.exchange-btn{
+	width: 80%;
+	text-align: center;
+	background-color:rgba(0, 95, 166) ;
+}
+.layui-input-block{
+	text-align: center;
+	margin-left: 0px;
+}
+.footer{
+	margin-top: 6rem;
+}
+.footer .warn{
+	color: red;
+}
+.footer p{
+	line-height: 1.6rem;
+}
+/*兑换ing页面*/
+.exchanging_form{
+	margin-top: 1rem;
+}
+.exchanging_form label{
+	padding: 9px 5px;
+}
+.right_input{
+	text-align: right;
+	width: 49%;
+	border: none;
+	font-size: 14px;
+	float: right;
+}
+.left_lable{
+	text-align: left;
+}
+.msgRow{
+	border-bottom: 1px solid gainsboro;
+}
+.msgRow span{
+	font-size: 12px;
+}
+.next_step{
+	width: 50%;
+	background-color: rgba(0, 95, 166);
+}
+.layui-badge-dot{
+	margin: 0 10px
+}
+.check_point{
+	float: right;
+	background-color: rgba(0, 95, 166);
+	height: 30px;
+	line-height: 30px;
+}
+/*弹窗样式*/
+.code_input{
+	line-height: 2rem;
+	border: none;
+	margin: 0 0 0 20px;
+}
+.pwd_input{
+	border: none;
+	margin: 0 0 0 20px;
+}
+/*成功失败页面*/
+.success {
+	margin-top: 2rem;
+	text-align: center;
+}
+.success img{
+	height: 55px;
+	height: 55px;
+}
+.activeMsg{
+	margin-top:1rem;
+}
+.successMsg{
+	margin-top: 2rem;
+}
+.successMsg span{
+	color: rgba(0, 95, 166);
+}
+.close_btn{
+	margin-top: 2rem;
+	width: 50%;
+	background-color:rgba(0, 95, 166) ;
+}
+.errorMsg{
+	color: red;
+}
