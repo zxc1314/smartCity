@@ -1,0 +1,134 @@
+/* 最新动态 */
+.lastestNews {
+	padding: 0 1rem;
+    margin-bottom: 4rem;
+}
+
+.smartCityNotice {
+    border-bottom: 1px solid #eee;
+}
+
+.lastestNewsTitle {
+	margin: 2rem 0 1rem;
+	font: 600 19px/20px '黑体'
+}
+
+.noticeTitleBox {
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.noticeTitleBox .imgNotice {
+	display: inline-block;
+	width: 2rem;
+	padding: .2rem;
+}
+
+.noticeTitleBox .noticeTitle {
+	margin-left: 1rem;
+}
+
+.noticeTitleBox .noticeTitle p {
+	color: #333;
+}
+
+.noticeTitleBox .noticeTitle small {
+	color: #aaa;
+}
+
+.noticeTxt h2 {
+	font: 600 15px/25px 'Arial Verdana';
+}
+
+.noticeTxt small {
+	color: #aaa;
+}
+
+.grayBox-icon {
+	display: inline-block;
+	margin-right: .3rem;
+	width: 11.6px;
+    height: 11.6px;
+	line-height: 1.2rem; 
+	background-color: #aaa;
+	font-size: 16px;
+}
+
+.time {
+	margin: 1rem 0;
+}
+
+.rechargeMsg {
+	color: #999;
+	word-break: break-all;
+}
+
+/* 底部固定导航 */
+.footer {
+	position: fixed;
+	bottom: 0;
+	max-width: 768px;
+    width: 100%;
+	padding: .3rem 0;
+	background-color: rgba(249, 249, 249, 1)
+}
+
+.footer .img-txt h3 {
+	color: #999;
+	font-size: 12px;
+	text-align: center;
+}
+
+.footer .img-txt img {
+	width: 2rem;
+}
+.payContent .img-txt,.footer .img-txt {
+	color: #fff;
+	text-align: center;
+}
+
+.payContent .img-txt img {
+	width: 3.5rem;
+}
+.transitContent {
+    margin: 0 -15px;
+    padding: 0rem 1rem;
+    color: #000;
+    background-color: #fff;
+}
+.transitTitle {
+    font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #000;
+}
+.cardMsg .layui-tab-content {
+	padding: 0;
+}
+.cardMsg .layui-tab-title {
+    background-color: #F7F7F7;
+    margin: auto -15px;
+}
+.cardMsg .layui-tab {
+ 	margin-top: 0;
+ }
+.noticeBox {
+    margin-top: 15px;
+    border-bottom: 1px solid #8D8D8D;
+    padding-bottom: 20px;
+}
+.noticeStyle p {
+    text-align: center;
+    padding: 5px;
+    background-color: #005FA6;
+    width: 35px;
+    margin: 10px auto;
+    border-radius: 50%;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+}
+.noticeContent p {
+	margin-top: 10px;
+}
