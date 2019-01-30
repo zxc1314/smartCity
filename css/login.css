@@ -171,7 +171,7 @@
 /*实名认证*/
 
 .authen {
-	margin-top: 18%;
+	margin-top: 10%;
 }
 
 .submit_btn {
@@ -199,4 +199,22 @@
 .formInputBox {
 	position: relative;
 	border-bottom: 1px solid #eee;
+}
+.goBack{
+	position: absolute;
+    left: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(153,153,153,0);
+    color: #489CF5;
+}
+.msgTitle{
+	font-size: 1.25rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+.layui-form-item{
+	border-bottom: 1px solid gainsboro;
 }
