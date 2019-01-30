@@ -110,9 +110,18 @@
     background-color: #F7F7F7;
     margin: auto -15px;
 }
+.cardMsg .layui-tab-title li {
+	min-width: 30px;
+}
 .cardMsg .layui-tab {
  	margin-top: 0;
  }
+.cardMsg .layui-tab-brief>.layui-tab-title .layui-this:after {
+	border-bottom: none;
+}
+.cardMsg .layui-tab-brief>.layui-tab-title .layui-this {
+	color: #0056A1;
+}
 .noticeBox {
     margin-top: 15px;
     border-bottom: 1px solid #8D8D8D;
