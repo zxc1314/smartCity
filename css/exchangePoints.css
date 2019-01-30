@@ -133,3 +133,6 @@
 	width: 50%;
 	background-color:rgba(0, 95, 166) ;
 }
+.errorMsg{
+	color: red;
+}
