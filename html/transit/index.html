@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="../../css/base.css">
         <link rel="stylesheet" href="../../css/transitIndex.css">
         <link rel="stylesheet" href="../../css/swiper.min.css">
-        <link rel="stylesheet" href="../../css/certify.css">
+        <!-- <link rel="stylesheet" href="../../css/certify.css"> -->
     </head>
     <body style="background-color: #F2F2F2;">
         <div class="layui-fluid">
@@ -33,35 +33,35 @@
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="layui-col-xs10 layui-col-xs-offset1 transitCard">
+                                <div class="transitCard">
                                     <p class="title"><img src="../../img/sy_gjc.png">广西农信城市云卡</p>
                                     <p class="cardNum">2013 1811 131</p>
                                     <p class="cardName"><span>城市云卡</span></p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="layui-col-xs10 layui-col-xs-offset1 transitCard">
+                                <div class="transitCard">
                                     <p class="title"><img src="../../img/sy_gjc.png">广西农信城市云卡</p>
                                     <p class="cardNum">2013 1811 132</p>
                                     <p class="cardName"><span>城市云卡</span></p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="layui-col-xs10 layui-col-xs-offset1 transitCard">
+                                <div class="transitCard">
                                     <p class="title"><img src="../../img/sy_gjc.png">广西农信城市云卡</p>
                                     <p class="cardNum">2013 1811 133</p>
                                     <p class="cardName"><span>城市云卡</span></p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="layui-col-xs10 layui-col-xs-offset1 transitCard">
+                                <div class="transitCard">
                                     <p class="title"><img src="../../img/sy_gjc.png">广西农信城市云卡</p>
                                     <p class="cardNum">2013 1811 134</p>
                                     <p class="cardName"><span>城市云卡</span></p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="layui-col-xs10 layui-col-xs-offset1 transitCard">
+                                <div class="transitCard">
                                     <p class="title"><img src="../../img/sy_gjc.png">广西农信城市云卡</p>
                                     <p class="cardNum">2013 1811 135</p>
                                     <p class="cardName"><span>城市云卡</span></p>
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="layui-col-xs10 layui-col-xs-offset1 transitCard">
+                <!-- <div class="transitCard">
                     <p class="title"><img src="../../img/sy_gjc.png">广西农信城市云卡</p>
                     <p class="cardNum">2013 1811 132</p>
                     <p class="cardName"><span>城市云卡</span></p>
@@ -156,7 +156,7 @@
             
         
         });
-        var certifySwiper = new Swiper('#certify .swiper-container', {
+        /*var certifySwiper = new Swiper('#certify .swiper-container', {
             watchSlidesProgress: true,
             slidesPerView: 'auto',
             centeredSlides: true,
@@ -202,7 +202,24 @@
                 }
             }
 
-        })
+        })*/
+        var swiper = new Swiper('#certify .swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          loop: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
 
     </script>
 
