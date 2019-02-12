@@ -80,7 +80,7 @@
             <!-- 主要的功能内容盒子 -->
             <div class="layui-row transitContentBox">
                 <div class="layui-col-xs6">
-                    <a href="myTransitCard.html">
+                    <a href="javascript:;" id="transitCode">
                         <div class="layui-row contentOne">
                             <div class="layui-col-xs5">
                                 <img src="../../img/sy_gjc.png">
@@ -92,7 +92,7 @@
                     </a>
                 </div>
                 <div class="layui-col-xs6">
-                    <a href="cardBalance.html">
+                    <a href="javascript:;" id="transitBalance">
                         <div class="layui-row contentOne">
                             <div class="layui-col-xs5">
                                 <img src="../../img/sy_gjc.png">
@@ -104,7 +104,7 @@
                     </a>
                 </div>
                 <div class="layui-col-xs6">
-                    <a href="javascript:;">
+                    <a href="javascript:;" id="transitRecharge">
                         <div class="layui-row contentOne">
                             <div class="layui-col-xs5">
                                 <img src="../../img/sy_gjc.png">
@@ -116,7 +116,7 @@
                     </a>
                 </div>
                 <div class="layui-col-xs6">
-                    <a href="transactionDetails.html">
+                    <a href="javascript:;" id="transactionDetails">
                         <div class="layui-row contentOne">
                             <div class="layui-col-xs5">
                                 <img src="../../img/sy_gjc.png">
@@ -128,7 +128,7 @@
                     </a>
                 </div>
                 <div class="layui-col-xs6">
-                    <a href="javascript:;">
+                    <a href="javascript:;" id="serviceRange">
                         <div class="layui-row contentOne">
                             <div class="layui-col-xs5">
                                 <img src="../../img/sy_gjc.png">
@@ -142,6 +142,9 @@
             </div>
             <!-- 主要的功能盒子 -->
         </div>
+        <!-- 隐藏域,存放卡片信息 -->
+        <input type="hidden" id="cardMsg" value="">
+        <!-- 隐藏域,存放卡片信息 --> 
     </body>
     <script src="../../js/jquery-3.3.1.min.js"></script>
     <script src="../../layui/layui.js"></script>
@@ -204,23 +207,52 @@
 
         })*/
         var swiper = new Swiper('#certify .swiper-container', {
-          effect: 'coverflow',
-          grabCursor: true,
-          loop: true,
-          centeredSlides: true,
-          slidesPerView: 'auto',
-          coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows : true,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-          },
+            effect: 'coverflow',
+            grabCursor: true,
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows : true,
+            },
+            on: {
+                 transitionEnd: function(){
+                    console.log(this.slides.eq(this.activeIndex).html());
+                    var $this = this.slides.eq(this.activeIndex);
+                    console.log(this.slides.eq(this.activeIndex).find(".cardNum").text());
+                    $("#cardMsg").val($this.find(".cardNum").text());
+                }
+            }
         });
-
+        // 乘车码
+        $("#transitCode").on("click",function(){
+            var codeId = $("#cardMsg").val().replace(/\s*/g,"");
+            window.location.href = "myTransitCard.html?codeId="+codeId;
+        });
+        // 余额
+        $("#transitBalance").on("click",function(){
+            var codeId = $("#cardMsg").val().replace(/\s*/g,"");
+            window.location.href = "cardBalance.html?codeId="+codeId;
+        });
+        // 充值
+        $("#transitRecharge").on("click",function(){
+            var codeId = $("#cardMsg").val().replace(/\s*/g,"");
+            window.location.href = "transitRecharge.html?codeId="+codeId;
+        });
+        // 交易明细
+        $("#transactionDetails").on("click",function(){
+            var codeId = $("#cardMsg").val().replace(/\s*/g,"");
+            window.location.href = "transactionDetails.html?codeId="+codeId;
+        });
+        // 服务范围
+        $("#serviceRange").on("click",function(){
+            var codeId = $("#cardMsg").val().replace(/\s*/g,"");
+            window.location.href = "serviceRange.html?codeId="+codeId;
+        });
     </script>
 
 </html>
