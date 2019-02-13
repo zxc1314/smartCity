@@ -14,7 +14,7 @@
 		<div class="layui-fluid">
 			<div class="layui-row card_content">
 				<h2 class="cardTitle">
-                    <a href="javascript:history.back(-1)" class="cardBack">
+                    <a href="javascript:;" class="cardBack ofenBack">
                         <i class="layui-icon layui-icon-left"></i> 返回
                     </a>
                     充值
@@ -121,7 +121,12 @@
 						layer.msg(JSON.stringify(data.field));
 						return false;
 					});
-
+				//返回按钮
+	            $(".ofenBack").on("click",
+	            function() {
+	                var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+	                parent.layer.close(index); //再执行关闭
+	            });
 				//充值金额点击改变样式
 				$(".rechargeAmount").on("click", ".amountNum", function() {
 					var $this = $(this);

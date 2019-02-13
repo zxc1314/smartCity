@@ -231,27 +231,92 @@
         // 乘车码
         $("#transitCode").on("click",function(){
             var codeId = $("#cardMsg").val().replace(/\s*/g,"");
-            window.location.href = "myTransitCard.html?codeId="+codeId;
+            //window.location.href = "myTransitCard.html?codeId="+codeId;
+            layer.open({
+                type: 2,
+                closeBtn: 0,
+                title: false,
+                content: "myTransitCard.html?codeId="+codeId,
+                area: ['100%', '100%'],
+                yes: function(index) {
+                    layer.close(index);
+                },
+                end: function() {
+                    form.render();
+                }
+            });
         });
         // 余额
         $("#transitBalance").on("click",function(){
             var codeId = $("#cardMsg").val().replace(/\s*/g,"");
-            window.location.href = "cardBalance.html?codeId="+codeId;
+            //window.location.href = "cardBalance.html?codeId="+codeId;
+            layer.open({
+                type: 2,
+                closeBtn: 0,
+                title: false,
+                content: "cardBalance.html?codeId="+codeId,
+                area: ['100%', '100%'],
+                yes: function(index) {
+                    layer.close(index);
+                },
+                end: function() {
+                    form.render();
+                }
+            });
         });
         // 充值
         $("#transitRecharge").on("click",function(){
             var codeId = $("#cardMsg").val().replace(/\s*/g,"");
-            window.location.href = "transitRecharge.html?codeId="+codeId;
+            //window.location.href = "transitRecharge.html?codeId="+codeId;
+            layer.open({
+                type: 2,
+                closeBtn: 0,
+                title: false,
+                content: "transitRecharge.html?codeId="+codeId,
+                area: ['100%', '100%'],
+                yes: function(index) {
+                    layer.close(index);
+                },
+                end: function() {
+                    form.render();
+                }
+            });
         });
         // 交易明细
         $("#transactionDetails").on("click",function(){
             var codeId = $("#cardMsg").val().replace(/\s*/g,"");
-            window.location.href = "transactionDetails.html?codeId="+codeId;
+            //window.location.href = "transactionDetails.html?codeId="+codeId;
+            layer.open({
+                type: 2,
+                closeBtn: 0,
+                title: false,
+                content: "transactionDetails.html?codeId="+codeId,
+                area: ['100%', '100%'],
+                yes: function(index) {
+                    layer.close(index);
+                },
+                end: function() {
+                    form.render();
+                }
+            });
         });
         // 服务范围
         $("#serviceRange").on("click",function(){
             var codeId = $("#cardMsg").val().replace(/\s*/g,"");
-            window.location.href = "serviceRange.html?codeId="+codeId;
+            //window.location.href = "serviceRange.html?codeId="+codeId;
+            layer.open({
+                type: 2,
+                closeBtn: 0,
+                title: false,
+                content: "serviceRange.html?codeId="+codeId,
+                area: ['100%', '100%'],
+                yes: function(index) {
+                    layer.close(index);
+                },
+                end: function() {
+                    form.render();
+                }
+            });
         });
     </script>
 
